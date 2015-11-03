@@ -1,0 +1,9 @@
+.site_header {
+	@include reset;
+	@extend .cf;
+	background-color: $color-header;
+	position: fixed;
+	width: 100%;
+	z-index: 99999;
+
+}

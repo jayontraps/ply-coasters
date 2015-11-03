@@ -1,0 +1,74 @@
+.logo {
+	padding: 1rem;
+	overflow: auto;
+	display: inline-block;
+	float: left;
+}
+
+
+.logo-title {
+	text-transform: uppercase;
+	font-weight: 300;
+	float: left;
+	font-size: 2rem;
+	line-height: 2rem;
+	margin: 1rem 0 1rem 1rem;
+	animation-name: fadeIn;
+	animation-delay: 600ms;
+	animation-duration: 2s;
+	opacity: 0;
+}
+
+.logo-shapes {
+	width: 4rem;
+	height: 4rem;
+	float: left;
+}
+
+.c-shape {
+	animation-name: fadeInLeft;
+	// opacity: 0;
+}	
+
+#c-shape-1 {
+	animation-delay: 25ms;
+	
+}
+#c-shape-2 {
+	animation-delay: 50ms;
+	
+}
+#c-shape-3 {
+	animation-delay: 75ms;
+	
+}
+#c-shape-4 {
+	animation-delay: 100ms;
+	
+}
+#c-shape-5 {
+	animation-delay: 125ms;
+	
+}
+#c-shape-6 {
+	animation-delay: 150ms;
+	
+}
+#c-shape-7 {
+	animation-delay: 175ms;
+	
+}
+#c-shape-8 {
+	animation-delay: 200ms;
+	
+}
+
+.st0{fill:#155147;}
+.c-shape{enable-background:new    ;}
+.st2{fill:#8B7262;}
+.st3{fill:#96A08F;}
+.st4{fill:#CE917E;}
+.st5{fill:#CFB7AB;}
+.st6{fill:#799791;}
+.st7{fill:#DDD6D2;}
+.st8{fill:#454E4C;}
