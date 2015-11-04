@@ -5,7 +5,8 @@
 @import 'helpers/helpers';
 @import 'helpers/getActiveMQ';
 @import 'helpers/animate';
-@import 'helpers/animations';
+// @import 'helpers/animations';
+@import 'helpers/coaster-animations';
 
 
 // base
@@ -25,5 +26,9 @@
 @import 'components/header';
 @import 'components/logo';
 @import 'components/footer';
-
+@import 'components/hero';
+@import 'components/flexSlider';
+@import 'components/slides';
+@import 'components/about';
+@import 'components/contact';
 

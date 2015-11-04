@@ -3,6 +3,7 @@
 	overflow: auto;
 	display: inline-block;
 	float: left;
+	// display: none;
 }
 
 
@@ -10,18 +11,25 @@
 	text-transform: uppercase;
 	font-weight: 300;
 	float: left;
-	font-size: 2rem;
-	line-height: 2rem;
+	font-size: 1.5rem;
+	line-height: 1.5rem;
 	margin: 1rem 0 1rem 1rem;
-	animation-name: fadeIn;
-	animation-delay: 600ms;
-	animation-duration: 2s;
 	opacity: 0;
 }
 
+.show-bg {
+	.logo-title {
+	animation-name: fadeIn;
+	animation-delay: 600ms;
+	animation-duration: 2s;
+	}
+}
+
 .logo-shapes {
-	width: 4rem;
-	height: 4rem;
+	// padding: 6px;
+	// background-color: $transparent-white;
+	width: 3rem;
+	height: 3rem;
 	float: left;
 }
 
@@ -69,6 +77,12 @@
 .st3{fill:#96A08F;}
 .st4{fill:#CE917E;}
 .st5{fill:#CFB7AB;}
-.st6{fill:#799791;}
+.st6{fill:#CE917E;}
 .st7{fill:#DDD6D2;}
 .st8{fill:#454E4C;}
+
+
+
+
+
+

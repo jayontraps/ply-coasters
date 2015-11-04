@@ -1,9 +1,13 @@
 .site_header {
 	@include reset;
 	@extend .cf;
-	background-color: $color-header;
+	
 	position: fixed;
 	width: 100%;
-	z-index: 99999;
-
+	z-index: 9;
+	transition: all 0.7s ease;
+	&.show-bg {
+		background-color: $transparent-white;
+	    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.23);
+	}
 }

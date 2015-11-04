@@ -19,6 +19,10 @@
 			display: block;
 			border-top: 2px solid $color-text;
 			padding-top: 1.5rem;
+			color: $white;
+			&.on {
+				color: red;
+			}
 		}		
 		
 		&:nth-child(1) {
@@ -44,8 +48,18 @@
 			border-color: #96A08F;
 			}
 		}
+	}	
+}
 
 
+.show-bg {
+
+	.main_nav {
+
+		li {
+			a {
+				color: $color-main;	
+			}
+		}
 	}
-	
 }

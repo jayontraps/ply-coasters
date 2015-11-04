@@ -1,0 +1,37 @@
+
+
+#hero {
+	background: url('../img/fullscreen/images-full-screen-4.jpg');
+	background-size: cover;
+	background-position: 0 48%;
+}
+
+.site_title {
+	margin: 0;
+	@media (min-width: $breakpoint-medium) {
+		margin-top:-12rem;
+	}
+	
+}
+
+.hero {
+	h1 {
+		margin-top: -4rem;
+		color: white;
+		font-size: 4rem;
+		font-weight: 300;
+		text-transform: uppercase;		
+	}
+
+
+	.text {
+		font: 2em/1 Raleway, arial;
+		font-weight: 300;
+		text-transform: uppercase;
+		fill: white;
+		// fill: url(#gr-simple);
+		stroke-width: 1;
+		stroke-opacity: .5;
+		stroke: #bf8651;
+	}	
+}

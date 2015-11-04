@@ -2,31 +2,100 @@
 
 	$(document).ready(function() {
 
-		var $sections = $('.section');
+		/* NAVIGATION */
 
-		// console.log($sections);
+		var $sections = $('.section');
+		var $navLinks = $('.site_header a');
+		var pt = {
+			inClass: 'fadeIn',
+			outClass: '',
+			isAnimating: false
+		};
 
 		$('.site_header').on('click', 'a', function(e) {
+
 			e.preventDefault();
-			var $this = $(this);			
-			var $activeSec = $sections.filter('.active');
-			var targetHref = $this.attr('href');
-			var $targetSec = $sections.filter(targetHref);
-			var outClass = 'pt-page-moveToLeftFade',
-				inClass = 'active pt-page-moveToRight';			
+
+			var $this = $(this),
+				$activeSec = $sections.filter('.active'),
+				targetHref = $this.attr('href'),
+				$targetSec = $sections.filter(targetHref);
+
+			if ( $this.hasClass('on') || pt.isAnimating ) {
+				return false;
+			}
+
+			$navLinks.removeClass('on');
+			$this.addClass('on');
 
 
-			$sections.removeClass('active');
-			$activeSec.removeClass('active');
-			$targetSec.addClass('active');
 
-			// // cycle through animations
-			// $sections.removeClass('active pt-page-moveToLeftFade pt-page-moveToRight');
-			// $activeSec.addClass(outClass);
-			// $targetSec.addClass(inClass);
+			if (targetHref === '#collections') {
+				pt.outClass = 'moveToTop';
+				pt.inClass = 'moveFromBottom';
+			} else {
+				pt.outClass = 'moveToRightFade';
+				pt.inClass = 'fadeIn';
+			}		
+		
 
 
+			$sections.not($activeSec).removeClass('active');
+
+			$activeSec.addClass(pt.outClass + ' isAnimating');
+
+			pt.isAnimating = true;
+
+			$targetSec.addClass(pt.inClass + ' active');
+
+			setTimeout(function() {
+				$activeSec.removeClass( pt.outClass + ' active isAnimating');
+				$targetSec.removeClass( pt.inClass );
+				pt.isAnimating = false;
+			}, 700);
+					
 		});
+
+
+
+
+
+
+		/* SLIDES */
+
+		$('.flexslider').flexslider({
+			animation: "fade",
+			slideshow: false,
+			controlsContainer: $(".custom-controls-container"),
+			customDirectionNav: $(".custom-navigation a"),
+			start: function(slider){
+			  $('body').removeClass('loading');
+			}
+		});
+
+
+
+		/* SHOW WHITE HEADER */
+
+		$navLinks.on('click', function() {
+
+			var $this = $(this),
+				$thisHref = $this.attr('href'),
+				$site_header = $('.site_header');
+
+			if( $thisHref === '#about' ) {
+				$site_header.addClass('show-bg');
+			} else if ( $thisHref === '#collections' ) {
+				$site_header.removeClass('show-bg');
+			} else if ( $thisHref === '#contact' ) {
+				$site_header.addClass('show-bg');
+			} else if ( $thisHref === '#hero' ) {
+				$site_header.removeClass('show-bg');
+			}
+		});
+
+
+
 
 	});
 

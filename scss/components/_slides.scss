@@ -1,0 +1,57 @@
+.flexslider {
+	@include reset;
+	border: none;
+	height: 100%;
+}
+
+.slides {
+	@include reset;
+	list-style: none;
+	height: 100%;
+	li {
+		background-size: cover;
+		background-position: center center;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+// .flex-direction-nav a 
+.slide-nav {
+    text-decoration: none;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    overflow: hidden;
+    // opacity: 0;
+    cursor: pointer;
+    background-color: red;
+    color: rgba(0,0,0,0.8);
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    &.flex-prev {
+    	left: 50px;    	
+    }
+
+    &.flex-next {
+    	right: 50px;    	
+    }
+}
+
+
+
+.flex-control-nav {
+	z-index: 10;
+	bottom: 10%;
+}
+
+
+
+
+
