@@ -2,8 +2,22 @@
 <defs>     
 <!-- <symbol id="icon-logo" viewBox="0 0 1024 1024"> -->
 
+<symbol id="arrow-prev" viewBox="0 0 184.975 368.519">
+	<polyline class="arrow-line" points="184.249,368.165 0.354,184.269 184.268,0.354 "/>
+</symbol>
 
+<symbol id="arrow-next" viewBox="0 0 184.975 368.519">
+	<polyline class="arrow-line" points="0.372,368.165 184.268,184.269 0.354,0.354 "/>
+</symbol>
 
+<symbol id="arrow-up" viewBox="0 0 368.519 184.975">
+	<polyline class="arrow-line" points="0.353,184.249 184.25,0.354 368.165,184.268 "/>
+</symbol>
 
+<symbol id="arrow-down" viewBox="0 0 368.519 184.975">
+	<polyline class="arrow-line" points="368.166,0.372 184.269,184.268 0.354,0.354 "/>
+</symbol>
 
-</defs></svg>
+</defs>
+
+</svg>

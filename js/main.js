@@ -58,6 +58,13 @@
 
 
 
+		/* HERO DOWN LINK */
+		$('#down-link').on('click', function(e) {
+			e.preventDefault();
+			$('#collections-link').trigger('click');
+		});
+
+
 
 
 

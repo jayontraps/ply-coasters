@@ -1,6 +1,7 @@
+.DS_Store
 .sass-cache
 node_modules
-images
+img
 build
 js/jquery.easing.js
 js/jquery.flexslider-min.js

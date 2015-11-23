@@ -16,12 +16,11 @@
 	}
 }
 
-// .flex-direction-nav a 
-.slide-nav {
+.direction-nav {
     text-decoration: none;
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 60px;
     margin: -20px 0 0;
     position: absolute;
     top: 50%;
@@ -29,18 +28,24 @@
     overflow: hidden;
     // opacity: 0;
     cursor: pointer;
-    background-color: red;
     color: rgba(0,0,0,0.8);
     text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 
     &.flex-prev {
-    	left: 50px;    	
+    	left: 50px;  
+        &:hover {
+            left:45px;
+        }  	
     }
 
     &.flex-next {
-    	right: 50px;    	
+    	right: 50px;
+        &:hover {
+            right:45px;
+        }   
+
     }
 }
 
@@ -50,6 +55,58 @@
 	z-index: 10;
 	bottom: 10%;
 }
+
+.arrow {
+    width: 30px;
+    height: 60px;
+}
+
+
+.arrow-line {
+    fill:none;
+    stroke:$white;
+    stroke-width: 10px;
+    // stroke-miterlimit:10;
+}
+
+
+
+/*  paging  */
+
+
+.flex-control-paging {
+
+    li {
+        a {
+            width: 11px;
+            height: 11px;
+            display: block;
+            background: #666;
+            background: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            text-indent: -9999px;
+            -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+            -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;  
+
+            &:hover {
+                background: #333;
+                background: rgba(0, 0, 0, 0.7);
+            }   
+            &.flex-active {
+                background: #000;
+                background: rgba(0, 0, 0, 0.9);
+                cursor: default;
+            }       
+        }
+    }
+} 
+
+
 
 
 

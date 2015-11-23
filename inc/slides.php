@@ -22,8 +22,18 @@
   </li>
 </ul>
 </div>
+
+
 <div class="custom-navigation">
-<a href="#" class="slide-nav flex-prev">Prev</a>
-<div class="custom-controls-container"></div>
-<a href="#" class="slide-nav flex-next">Next</a>
+
+	<a href="#" class="direction-nav flex-prev">
+		<svg class="arrow arrow-prev"><use xlink:href="#arrow-prev"></use></svg>
+	</a>
+	
+	<div class="custom-controls-container"></div>
+
+	<a href="#" class="direction-nav flex-next">
+		<svg class="arrow arrow-next"><use xlink:href="#arrow-next"></use></svg>
+	</a>
+
 </div>

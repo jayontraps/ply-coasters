@@ -19,5 +19,9 @@
 	    Ply Coasters
 	  </text>
 	</svg>	
+
+	<a href="#collections" id="down-link" class="hero-down-link">
+		<svg class="arrow-down"><use xlink:href="#arrow-down"></use></svg>
+	</a>
 	
 </div>

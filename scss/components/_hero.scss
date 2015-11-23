@@ -35,3 +35,22 @@
 		stroke: #bf8651;
 	}	
 }
+
+.hero-down-link {
+	position: absolute;
+	bottom: 3%;
+	left: 50%;
+	margin-left: -25px;
+	transition: all 0.3s ease;
+	&:hover {
+		bottom: 2%;
+	}
+}
+
+.arrow-down {
+	width: 50px;
+	height: 25px;
+}
+
+
+
