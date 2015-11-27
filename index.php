@@ -1,41 +1,55 @@
-<?php include 'inc/header.php'; ?>
+<?php include 'inc/head.php'; ?>
 
 <?php include 'inc/svg-defs.php'; ?>
 
-<div class="container pt-perspective"> 
+<div class="container"> 
+
+	<svg class="icon icon-menu"><use xlink:href="#icon-menu"></use></svg>
 
 	<header class="site_header">
 		<div class=" inner_wrap">
 
 			<div class="logo">
+
 				<a class="on" href="#hero">
-					<div class="logo-shapes">
-						<?php include "inc/logo-svg.php"; ?>  
-					</div>
-					<h1 class="logo-title animated">Ply Coasters</h1>
+
+					<img src="img/logo-shapes-plus-words-2.svg" />					
+
 				</a>
+
 			</div>
 			
-			<?php include 'inc/main-nav.php'; ?>
+			<?php include 'inc/main-nav.php'; ?>			
 
 		</div>
 	</header>
 
 
 
-	<section id="hero" class="section hero pt-page active">
-		<?php include "inc/hero.php"; ?>
+	<section id="hero" class="section hero page active">
+
+		<div class="home-overlay"></div>
+
+		<div id="logo-ov" class="logo-overlay">
+			<?php include "inc/logo-overlay-svg.php"; ?>
+		</div>
+
+		<a href="#collections" id="down-link" class="hero-down-link">
+			<svg class="arrow-down"><use xlink:href="#arrow-down"></use></svg>
+		</a>		
+
 	</section>	
 
-	<section id="collections" class="section pt-page ">
+
+	<section id="collections" class="section page ">
 		<?php include "inc/slides.php"; ?>
 	</section>
 
-	<section id="about" class="section pt-page ">
+	<section id="about" class="section page ">
 		<?php include 'inc/about.php'; ?>
 	</section>
 
-	<section id="contact" class="section pt-page ">
+	<section id="contact" class="section page ">
 		<?php include 'inc/contact.php'; ?>
 	</section>
 

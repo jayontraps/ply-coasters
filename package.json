@@ -9,12 +9,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^6.1.1",
     "browser-sync": "^2.9.8",
     "gulp": "^3.9.0",
     "gulp-sass": "^2.0.4",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp-sourcemaps": "^1.6.0",
+    "lost": "^6.6.2"
   },
   "dependencies": {
-    "gulp-pleeease": "^2.0.1"
+    "gulp-pleeease": "^2.0.1",
+    "gulp-postcss": "^6.0.1"
   }
 }

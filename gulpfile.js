@@ -3,6 +3,11 @@ var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var pleeease = require('gulp-pleeease');
+var postcss = require('gulp-postcss');
+var lost    = require('lost');
+var autoprefixer = require('autoprefixer');
+
+
 
 var css = {
     pleeeaseOpts: {
@@ -30,12 +35,28 @@ gulp.task('serve', ['sass'], function() {
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
     return gulp.src("scss/screen.scss")
+
     	.pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'nested'}))
-        .pipe(pleeease(css.pleeeaseOpts))
+
+        .pipe(postcss([
+              lost(),
+              autoprefixer({
+                browsers: ['last 2 versions']
+            })
+        ]))         
+
+        // .pipe(pleeease(css.pleeeaseOpts))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest("css"))
         .pipe(browserSync.stream());
+
 });
 
 gulp.task('default', ['serve']);
+
+
+
+
+
+

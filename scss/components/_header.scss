@@ -1,13 +1,27 @@
 .site_header {
+
 	@include reset;
 	@extend .cf;
-	
 	position: fixed;
+	height: auto;
 	width: 100%;
 	z-index: 9;
+	transform: translateY(-200px);
 	transition: all 0.7s ease;
-	&.show-bg {
-		background-color: $transparent-white;
-	    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.23);
+
+	&.toggled {
+		transform: translateY(0);
+		background-color: $transparent-black;
 	}
+
+}
+
+@media (min-width: $breakpoint-small ) {
+
+	.site_header {
+		height: 88px;
+		transform: translateY(0);
+		background-color: transparent;
+	}
+
 }

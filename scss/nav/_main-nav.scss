@@ -1,5 +1,6 @@
 .main_nav {
 	list-style: none;
+	clear: none;
 	float: right;
 	margin-top: 1rem;
 	animation-name: fadeIn;
@@ -51,15 +52,26 @@
 	}	
 }
 
+@media (max-width: $breakpoint-small) {
 
-.show-bg {
+	.main_nav {		
+		float: none;
+		clear: left;
+		width: 100%;
+		padding-bottom: 1em;
 
-	.main_nav {
-
-		li {
-			a {
-				color: $color-main;	
-			}
-		}
 	}
 }
+
+
+// .show-bgc {
+
+// 	.main_nav {
+
+// 		li {
+// 			a {
+// 				color: $color-main;	
+// 			}
+// 		}
+// 	}
+// }

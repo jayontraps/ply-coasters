@@ -7,9 +7,10 @@
 }
 
 .site_title {
+	
 	margin: 0;
 	@media (min-width: $breakpoint-medium) {
-		margin-top:-12rem;
+		// margin-top:-12rem;
 	}
 	
 }
@@ -37,14 +38,19 @@
 }
 
 .hero-down-link {
+	opacity: 0;
 	position: absolute;
 	bottom: 3%;
 	left: 50%;
 	margin-left: -25px;
 	transition: all 0.3s ease;
+	&.on {
+		opacity: 1;
+	}
 	&:hover {
 		bottom: 2%;
 	}
+
 }
 
 .arrow-down {

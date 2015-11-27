@@ -15,12 +15,16 @@
 @import 'base/layout';
 @import 'base/webfonts';
 @import 'base/sections';
+@import 'base/svg-sprites';
 
 
 // navigation
-// @import 'nav/off-canvas';
 @import 'nav/main-nav';
+@import 'nav/menu-toggle';
 
+
+// sections
+@import 'sections/about';
 
 // components
 @import 'components/header';
@@ -29,6 +33,9 @@
 @import 'components/hero';
 @import 'components/flexSlider';
 @import 'components/slides';
-@import 'components/about';
+@import 'components/cards';
+@import 'components/card-grid';
+// @import 'components/card-text-overlay';
 @import 'components/contact';
+@import 'components/home-overlay';
 

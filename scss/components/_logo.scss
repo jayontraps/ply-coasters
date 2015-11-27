@@ -1,85 +1,37 @@
 .logo {
-	padding: 1rem;
+	padding: 2rem 0 1rem 0;
 	overflow: auto;
 	display: inline-block;
+	width: 260px;
 	float: left;
-	// display: none;
+	opacity: 1;
+	transition: all 1s ease;
 }
 
+@media (min-width: $breakpoint-small) {
 
-.logo-title {
-	text-transform: uppercase;
-	font-weight: 300;
-	float: left;
-	font-size: 1.5rem;
-	line-height: 1.5rem;
-	margin: 1rem 0 1rem 1rem;
-	opacity: 0;
-}
-
-.show-bg {
-	.logo-title {
-	animation-name: fadeIn;
-	animation-delay: 600ms;
-	animation-duration: 2s;
+	.logo {
+		opacity: 0;
 	}
+
+	.init {
+		.logo {
+			opacity: 1;
+		}	
+	}	
 }
+
+
+
+
 
 .logo-shapes {
-	// padding: 6px;
-	// background-color: $transparent-white;
-	width: 3rem;
-	height: 3rem;
+	width: 1em;
+	height: 1em;
 	float: left;
+	margin-right: 1rem;
 }
 
-.c-shape {
-	animation-name: fadeInLeft;
-	// opacity: 0;
-}	
-
-#c-shape-1 {
-	animation-delay: 25ms;
-	
-}
-#c-shape-2 {
-	animation-delay: 50ms;
-	
-}
-#c-shape-3 {
-	animation-delay: 75ms;
-	
-}
-#c-shape-4 {
-	animation-delay: 100ms;
-	
-}
-#c-shape-5 {
-	animation-delay: 125ms;
-	
-}
-#c-shape-6 {
-	animation-delay: 150ms;
-	
-}
-#c-shape-7 {
-	animation-delay: 175ms;
-	
-}
-#c-shape-8 {
-	animation-delay: 200ms;
-	
-}
-
-.st0{fill:#155147;}
-.c-shape{enable-background:new    ;}
-.st2{fill:#8B7262;}
-.st3{fill:#96A08F;}
-.st4{fill:#CE917E;}
-.st5{fill:#CFB7AB;}
-.st6{fill:#CE917E;}
-.st7{fill:#DDD6D2;}
-.st8{fill:#454E4C;}
 
 
 
