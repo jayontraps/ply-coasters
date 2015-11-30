@@ -46,7 +46,7 @@
 	</section>
 
 	<section id="about" class="section page ">
-		<?php include 'inc/about.php'; ?>
+		<?php include 'inc/about-2.php'; ?>
 	</section>
 
 	<section id="contact" class="section page ">

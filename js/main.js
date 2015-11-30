@@ -1,34 +1,18 @@
 ( function($) {
 
 
-	// coaster = {
 
-	// 	"back":[
-	// 	    {
-	// 	    	"heading":"Coaster 1",
-	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-	// 	 	},	
-	// 	    {
-	// 	    	"heading":"Coaster 2",
-	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-	// 	 	},
-	// 	    {
-	// 	    	"heading":"Coaster 3",
-	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-	// 	 	},
-	// 	    {
-	// 	    	"heading":"Coaster 4",
-	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-	// 	 	},
-	// 	    {
-	// 	    	"heading":"Coaster 5",
-	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-	// 	 	},
-	// 	    {
-	// 	    	"heading":"Coaster 6",
-	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-	// 	     }
-	// ]};
+	$(document).ready( function() {
+
+		$('.Card__masonry').isotope({
+			itemSelector: '.grid-item',
+			percentPosition: true,
+			masonry: {
+			  columnWidth: '.grid-sizer'
+			}
+		});
+
+	});
 
 
 
@@ -209,9 +193,11 @@
 		var card = {};
 		var dimmer = $('.dimmer');
 		var cardContainer = $('.Card__container');
-		var textOverlay = $('.Card__text__overlay');
+		// var textOverlay = $('.Card__text__overlay');
 		
 		$('.Card').on('click', function(event) {
+
+			console.log('wtf');
 
 			var $this = $(this);
 
@@ -221,7 +207,8 @@
 
 			$(this)
 				.removeClass('return')
-				.addClass('moveToCenter flipped');
+				.addClass('moveToCenter flipped')
+				.parent().addClass('flipped');
 
 			window.x = $(window).width() / 2;
 		    window.y = $(window).height() / 2;
@@ -265,45 +252,6 @@
 
 				// pull back others
 				$('.Card').not(this).addClass('pull-back');
-
-
-
-
-
-
-				// inject text into overlay div to overcome blurry scaled text
-				// var currCoasterId = $this.find('.Card__content').data('order'),
-				// 	currCoasterHeading = coaster.back[currCoasterId].heading,
-				// 	currCoasterText = coaster.back[currCoasterId].text;
-			
-				// var 
-				// 	overlayLeftVal = window.x - 210,
-				// 	overlayTopVal = window.y - 210,
-				// 	textDivStyles = {
-				// 	'top' : overlayTopVal + 'px',
-				// 	'left' : overlayLeftVal + 'px'
-				// };
-
-
-				// textOverlay.css(textDivStyles);
-
-
-				// $('<h2/>', {
-				// 	'class': 'Card__content__heading',
-				// 	html: currCoasterHeading
-				// })
-				// .appendTo( textOverlay.find('#text_target'));
-
-				// $('<div/>', {
-				// 	'class': 'Card__content__text',
-				// 	html: currCoasterText
-				// })
-				// .appendTo( textOverlay.find('#text_target'));
-				
-
-
-
-
 
 
 
