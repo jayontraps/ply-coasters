@@ -1,34 +1,34 @@
 ( function($) {
 
 
-	coaster = {
+	// coaster = {
 
-		"back":[
-		    {
-		    	"heading":"Coaster 1",
-		     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-		 	},
-		    {
-		    	"heading":"Coaster 2",
-		     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-		 	},
-		    {
-		    	"heading":"Coaster 3",
-		     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-		 	},
-		    {
-		    	"heading":"Coaster 4",
-		     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-		 	},
-		    {
-		    	"heading":"Coaster 5",
-		     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-		 	},
-		    {
-		    	"heading":"Coaster 6",
-		     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-		     }
-	]};
+	// 	"back":[
+	// 	    {
+	// 	    	"heading":"Coaster 1",
+	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
+	// 	 	},	
+	// 	    {
+	// 	    	"heading":"Coaster 2",
+	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
+	// 	 	},
+	// 	    {
+	// 	    	"heading":"Coaster 3",
+	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
+	// 	 	},
+	// 	    {
+	// 	    	"heading":"Coaster 4",
+	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
+	// 	 	},
+	// 	    {
+	// 	    	"heading":"Coaster 5",
+	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
+	// 	 	},
+	// 	    {
+	// 	    	"heading":"Coaster 6",
+	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
+	// 	     }
+	// ]};
 
 
 
@@ -84,7 +84,7 @@
 			$navLinks.removeClass('on');
 			$this.addClass('on');
 
-			// enable scroll bar on about page
+			// enable scroll bar on mobile on long pages
 			$('body').removeClass('scroll');
 
 
@@ -102,6 +102,8 @@
 				$site_header.removeClass('show-bgc');
 				
 			} else if ( targetHref === '#contact' ) {
+
+				$('body').addClass('scroll');
 				
 				$site_header.addClass('show-bgc');
 				
@@ -359,6 +361,106 @@
 
 			});			
 		});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		/* CONTACT */
+		$(function() {
+
+			// Get the form.
+			var form = $('#ajax-contact');
+
+			// Get the messages div.
+			var formMessages = $('#form-messages');
+
+			// Set up an event listener for the contact form.
+			$(form).submit(function(e) {
+				// Stop the browser from submitting the form.
+				e.preventDefault();
+
+				// Serialize the form data.
+				var formData = $(form).serialize();
+
+				// Submit the form using AJAX.
+				$.ajax({
+					type: 'POST',
+					url: $(form).attr('action'),
+					data: formData
+				})
+				.done(function(response) {
+					// Make sure that the formMessages div has the 'success' class.
+					$(formMessages).removeClass('error');
+					$(formMessages).addClass('success');
+
+					// Set the message text.
+					$(formMessages).text(response);
+
+					// Clear the form.
+					$('#name').val('');
+					$('#email').val('');
+					$('#message').val('');
+				})
+				.fail(function(data) {
+					// Make sure that the formMessages div has the 'error' class.
+					$(formMessages).removeClass('success');
+					$(formMessages).addClass('error');
+
+					// Set the message text.
+					if (data.responseText !== '') {
+						$(formMessages).text(data.responseText);
+					} else {
+						$(formMessages).text('Oops! An error occured and your message could not be sent.');
+					}
+				});
+
+			});
+
+		});
+
+
+
+
+
+	
+	$('.modal').on('click', function() {
+		$('.Contact__box').addClass('activated');
+		$('.contact-tint').addClass('active');
+		$('.Contact__main').addClass('deactivate');
+	});
+	
+	$('.Contact__closeBtn').on('click', function(event) {
+		$('.Contact__box').removeClass('activated');
+		$('.contact-tint').removeClass('active');
+		$('.Contact__main').removeClass('deactivate');
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -14,16 +14,24 @@ $head-font-custom: 'Raleway';
 
 // colors
 $chalk_board: #2C2729;
-$color-text: #444;
+$color-text: #222;
 $color-back: #fbfbfb;
 $color-header: #fff;
 $color-main: #567;
 $color-light: lighten($color-main, 20%);
 $color-dark: darken($color-main, 20%);
 $black: #222;
-$transparent-white: rgba(255,255,255,.8);
+$transparent-white: rgba(255,255,255,.6);
 $transparent-black: rgba(0,0,0,.8);
+$transparent-mid-black: rgba(0,0,0,.3);
 $white: #fbfbfb;
+$grey: #888;
+$button_color: #0CF;
+$button_color_hover: #09C;
+$active_color: $button_color;
+
+
+
 
 $st1: #155147;
 $st2: #8B7262;

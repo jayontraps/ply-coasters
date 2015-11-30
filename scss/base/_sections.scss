@@ -6,6 +6,22 @@ body {
 	overflow: hidden;
 }
 
+@media (max-width : $breakpoint-small) {
+	
+	body {
+		&.scroll {
+
+			overflow: auto;
+
+			.page {
+				height: auto;		
+			}			
+		}
+	}
+}
+
+
+
 .container {
 	position: relative;
 	width: 100%;
@@ -33,21 +49,12 @@ body {
 	z-index: 1;
 }
 
-
 .isAnimating {
 	z-index: 2;
 }
 
 
-#collections {
-	background-color: $st1;	
-}
-#about {
-	background-color: $st8;	
-}
-#contact {
-	background-color: $st3;	
-}
+
 
 
 

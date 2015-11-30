@@ -12,6 +12,7 @@
 // base
 @import 'base/normalize';
 @import 'base/base';
+@import 'base/forms';
 @import 'base/layout';
 @import 'base/webfonts';
 @import 'base/sections';
@@ -24,18 +25,19 @@
 
 
 // sections
+@import 'sections/hero';
 @import 'sections/about';
+@import 'sections/collections';
+@import 'sections/contact';
 
 // components
 @import 'components/header';
 @import 'components/logo';
 @import 'components/footer';
-@import 'components/hero';
 @import 'components/flexSlider';
 @import 'components/slides';
 @import 'components/cards';
 @import 'components/card-grid';
-// @import 'components/card-text-overlay';
-@import 'components/contact';
+@import "components/Button";
 @import 'components/home-overlay';
 

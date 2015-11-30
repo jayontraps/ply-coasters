@@ -1,19 +1,6 @@
-@media (max-width : $breakpoint-small) {
-	
-	body {
-		&.scroll {
-			overflow: auto;
-		}
-	}
-
-	#about {
-		&.page {
-			height: 1700px;		
-		}
-	}
+#about {
+	background-color: $st8;	
 }
-
-
 
 .dimmer {
 	position: absolute;
