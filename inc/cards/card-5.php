@@ -1,4 +1,4 @@
-<div class="Card Card--grid">	
+<div class="Card Card--grid Card--5">	
 
 	<div class="Card__back">
 	
@@ -27,10 +27,13 @@
 				</div>
 			</div>
 		</div>
-	
-
 	</div>
 
-	<div class="Card__front"></div>
+
+	<div class="Card__front">
+		<div class="Card__front--title">Coaster no 5</div>
+		<div class="Card__front--tint"></div>
+	</div>
+
 
 </div>

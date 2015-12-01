@@ -18,7 +18,7 @@
 		color: $color-text;
 		background-color: #fff;
 		transition: all 800ms ease;
-		border: 5px solid $st3;		
+		border: 5px solid $dark_brown;		
 	}	
 	
 
@@ -28,36 +28,36 @@
 
 	&:nth-child(1) {
 		> div {
-			border-color: $st4;
+			border-color: $dark_green_grey;
 		}
 
 		.Card__back {
-			background-color: $st4;
+			background-color: $dark_green_grey;
 		}
 
 		.Card__front {
 			background-image: url(../img/square/square-2.jpg);
 			background-size: cover;
 			&:hover {
-				border-color: lighten($st4, 30);
+				border-color: lighten($dark_green_grey, 30);
 			}
 
 		}
 	}
 	&:nth-child(2) {
 		> div {
-			border-color: $st5;
+			border-color: $red;
 		}
 
 		.Card__back {
-			background-color: $st5;
+			background-color: $red;
 		}
 
 		.Card__front {
 			background-image: url(../img/square/square-4.jpg);
 			background-size: cover;
 			&:hover {
-				border-color: lighten($st5, 30);
+				border-color: lighten($red, 30);
 			}
 
 		}
@@ -65,18 +65,18 @@
 	&:nth-child(3) {
 
 		> div {
-			border-color: $st6;			
+			border-color: $pink;			
 		}
 
 		.Card__back {
-			background-color: $st6;
+			background-color: $pink;
 		}
 
 		.Card__front {
 			background-image: url(../img/square/square-3.jpg);
 			background-size: cover;
 			&:hover {
-				border-color: lighten($st6, 30);
+				border-color: lighten($pink, 30);
 			}			
 
 		}
@@ -84,54 +84,54 @@
 	&:nth-child(4) {
 
 		> div {
-			border-color: $st7;
+			border-color: $dark_blue;
 		}
 
 		.Card__back {
-			background-color: $st7;
+			background-color: $dark_blue;
 		}
 
 		.Card__front {
 			background-image: url(../img/square/square.jpg);
 			background-size: cover;
 			&:hover {
-				border-color: lighten($st7, 30);
+				border-color: lighten($dark_blue, 30);
 			}
 
 		}
 	}
 	&:nth-child(5) {
 		> div {
-			border-color: $st2;
+			border-color: $dark_green_grey;
 		}
 
 		.Card__back {
-			background-color: $st2;
+			background-color: $dark_green_grey;
 		}
 
 		.Card__front {
 			background-image: url(../img/square/square-2.jpg);
 			background-size: cover;
 			&:hover {
-				border-color: lighten($st2, 30);
+				border-color: lighten($dark_green_grey, 30);
 			}
 
 		}
 	}
 	&:nth-child(6) {
 		> div {
-			border-color: $st3;
+			border-color: $dark_brown;
 		}
 
 		.Card__back {
-			background-color: $st3;
+			background-color: $dark_brown;
 		}
 
 		.Card__front {
 			background-image: url(../img/square/square.jpg);
 			background-size: cover;
 			&:hover {
-				border-color: lighten($st3, 30);
+				border-color: lighten($dark_brown, 30);
 			}
 			
 		}

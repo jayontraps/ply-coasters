@@ -40,6 +40,7 @@ body {
 	backface-visibility: hidden;
 	transform: translate3d(0, 0, 0);
 	transform-style: preserve-3d;
+	// will-change: transform;
 }
 
 .page-current,

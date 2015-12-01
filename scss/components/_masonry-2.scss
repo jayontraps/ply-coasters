@@ -6,15 +6,10 @@
 }
 
 
-
-.grid-item,
-.grid-sizer {
-  width: 80%;
-  margin: 0 10%;
-}
-
 .grid-item {
-  height: 50%;
+  width: 80%;
+  margin: 0 10%;  
+  height: 250px;
   background:  $dark_green_grey;  
   border-top: 4px solid $dark_green_grey;  
   border-right: 4px solid $dark_green_grey; 
@@ -24,7 +19,7 @@
 
   .grid-item,
   .grid-sizer {
-    width: 40%;
+    width: 50%;
     margin: 0;
   }
 
@@ -34,11 +29,12 @@
 
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
 
   .grid-item,
   .grid-sizer {
     width: 20%;
+    height: 40%; 
     margin: 0;
   }
 
@@ -50,6 +46,20 @@
   }
   .grid-item--height2 { 
     height: 60%; 
-  }  
+  } 
+
+   .masonry-wrap {
+    
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 40%;
+      width: 60%;
+
+      .grid-item {
+        height: 100%;
+        width: 50%;
+      }
+   }
 
 }

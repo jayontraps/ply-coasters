@@ -2,17 +2,17 @@
 
 
 
-	$(document).ready( function() {
+	// $(document).ready( function() {
 
-		$('.Card__masonry').isotope({
-			itemSelector: '.grid-item',
-			percentPosition: true,
-			masonry: {
-			  columnWidth: '.grid-sizer'
-			}
-		});
+	// 	$('.Card__container').isotope({
+	// 		itemSelector: '.grid-item',
+	// 		percentPosition: true,
+	// 		masonry: {
+	// 		  columnWidth: '.grid-sizer'
+	// 		}
+	// 	});
 
-	});
+	// });
 
 
 
@@ -193,7 +193,20 @@
 		var card = {};
 		var dimmer = $('.dimmer');
 		var cardContainer = $('.Card__container');
-		// var textOverlay = $('.Card__text__overlay');
+
+		function returnTint() {
+			$('.Card__front--tint').each(function () {
+			    $(this).removeClass('on');
+			});
+		};
+
+		function removeTint() {
+			$('.Card--4 .Card__front--tint').addClass('on');
+		};
+
+
+		$(cardContainer).mouseenter(returnTint);
+		$(cardContainer).mouseleave(removeTint);
 		
 		$('.Card').on('click', function(event) {
 
@@ -207,8 +220,7 @@
 
 			$(this)
 				.removeClass('return')
-				.addClass('moveToCenter flipped')
-				.parent().addClass('flipped');
+				.addClass('moveToCenter flipped');
 
 			window.x = $(window).width() / 2;
 		    window.y = $(window).height() / 2;
@@ -251,7 +263,7 @@
 					.css('z-index', 'auto');
 
 				// pull back others
-				$('.Card').not(this).addClass('pull-back');
+				// $('.Card').not(this).addClass('pull-back');
 
 
 
@@ -305,8 +317,7 @@
 			}, 800);
 
 			$('.Card').each(function () {
-			    $(this).removeAttr('style').removeClass('pull-back');
-
+			    $(this).removeAttr('style');
 			});			
 		});
 
@@ -396,6 +407,8 @@
 		$('.contact-tint').removeClass('active');
 		$('.Contact__main').removeClass('deactivate');
 	});
+
+
 
 
 

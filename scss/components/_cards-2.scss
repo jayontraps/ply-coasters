@@ -13,7 +13,7 @@
 	transition: all 800ms ease;
 	cursor: pointer;
 
-	> div {
+	> div { /* Front & Back */
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -25,137 +25,175 @@
 		color: $color-text;
 		background-color: #fff;
 		transition: all 800ms ease;
-		border: 5px solid $st3;		
-	}	
-	
+		// border: 5px solid $dark_brown;		
+	}			
+}
 
-	// &.pull-back {
-	// 	transform: scale(0.95);
-	// }
 
-	&:nth-child(1) {
-		> div {
-			border-color: $st4;
-		}
 
-		.Card__back {
-			background-color: $st4;
-		}
 
-		.Card__front {
-			background-image: url(../img/square/square-2.jpg);
-			background-size: cover;
-			&:hover {
-				border-color: lighten($st4, 30);
-			}
+/* Card Front */
 
-		}
+.Card__front--tint {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;		
+	opacity: .90;
+	transition: all 400ms ease;
+
+	&:hover {
+		opacity: 0;
 	}
-	&:nth-child(2) {
-		> div {
-			border-color: $st5;
-		}
 
-		.Card__back {
-			background-color: $st5;
-		}
-
-		.Card__front {
-			background-image: url(../img/square/square-4.jpg);
-			background-size: cover;
-			&:hover {
-				border-color: lighten($st5, 30);
-			}
-
-		}
-	}
-	&:nth-child(3) {
-
-		> div {
-			border-color: $st6;			
-		}
-
-		.Card__back {
-			background-color: $st6;
-		}
-
-		.Card__front {
-			background-image: url(../img/square/square-3.jpg);
-			background-size: cover;
-			&:hover {
-				border-color: lighten($st6, 30);
-			}			
-
-		}
-	}
-	&:nth-child(4) {
-
-		> div {
-			border-color: $st7;
-		}
-
-		.Card__back {
-			background-color: $st7;
-		}
-
-		.Card__front {
-			background-image: url(../img/square/square.jpg);
-			background-size: cover;
-			&:hover {
-				border-color: lighten($st7, 30);
-			}
-
-		}
-	}
-	&:nth-child(5) {
-		> div {
-			border-color: $st2;
-		}
-
-		.Card__back {
-			background-color: $st2;
-		}
-
-		.Card__front {
-			background-image: url(../img/square/square-2.jpg);
-			background-size: cover;
-			&:hover {
-				border-color: lighten($st2, 30);
-			}
-
-		}
-	}
-	&:nth-child(6) {
-		> div {
-			border-color: $st3;
-		}
-
-		.Card__back {
-			background-color: $st3;
-		}
-
-		.Card__front {
-			background-image: url(../img/square/square.jpg);
-			background-size: cover;
-			&:hover {
-				border-color: lighten($st3, 30);
-			}
-			
-		}
+	&.on {
+		opacity: 0;
 	}	
 }
 
 
-@media (min-width: 420px) {
-	.Card {
-		// height: 200px;
-		// width: 200px;
-		// > div {
-		// 	height: 200px;
-		// 	width: 200px;
-		// }
+.Card__front--title {
+	display: inline-block;
+	text-align: right;
+	position: absolute;
+	bottom: .5rem;
+	right: .5rem;
+	color: $white;
+	z-index: 10;
+	opacity: 1;
+	transition: all 400ms ease;
+}
+
+
+.Card--1 {
+
+	.Card__back {
+		background-color: $dark_green;
+	}
+
+	.Card__front {
+		background-image: url(../img/square/square-2.jpg);
+		background-size: cover;
+	}
+
+	.Card__front--tint{
+		background-color: $dark_green;
+	}
+
+}
+
+
+.Card--2 {
+
+	.Card__back {
+		background-color: $dark_green_grey;
+	}
+
+	.Card__front {
+		background-image: url(../img/quilt/flowers.jpg);
+		background-size: cover;
+	}
+
+	.Card__front--tint{
+		background-color: $dark_green_grey;
 	}
 }
+
+
+.Card--3 {
+
+	.Card__back {
+		background-color: $dark_brown;
+	}
+
+	.Card__front {
+		background-image: url(../img/square/square-3.jpg);
+		background-size: cover;
+		background-position: bottom;
+
+	}
+
+	.Card__front--tint{
+		background-color: $dark_brown;
+	}
+}
+
+
+.Card--4 {
+
+	.Card__back {
+		background-color: $dark_green_grey;
+	}
+
+	.Card__front {
+		background-image: url(../img/square/square.jpg);
+		background-size: cover;		
+	}
+
+	.Card__front--tint{
+		background-color: $dark_green_grey;
+	}
+}
+
+
+.Card--5 {
+
+	.Card__back {
+		background-color: $red;
+	}
+
+	.Card__front {
+		background-image: url(../img/square/square-2.jpg);
+		background-size: cover;
+	}
+
+	.Card__front--tint{
+		background-color: $red;
+	}
+}
+
+
+.Card--6 {
+
+	.Card__back {
+		background-color: $pink;
+	}
+
+	.Card__front {
+		background-image: url(../img/square/square.jpg);
+		background-size: cover;		
+	}
+
+	.Card__front--tint{
+		background-color: $pink;
+	}
+}		
+
+
+.Card--7 {
+
+	.Card__back {
+		background-color: $dark_blue;
+	}
+
+	.Card__front {
+		background-image: url(../img/quilt/map-quilt-2.jpg);
+		background-size: cover;	
+	}
+
+	.Card__front--tint{
+		background-color: $dark_blue;
+	}
+}		
+
+
+
+
+
+
+
+
 
 
 
@@ -185,11 +223,11 @@
 	&.moveToCenter {
 
 		.Card__front {
-			transform: perspective(400px) rotateY(179.9deg) scale(1.3);
+			transform: perspective(400px) rotateY(179.9deg) scale(1.2);
 		}
 		
 		.Card__back{
-			transform: perspective(400px) rotateY(0deg) scale(1.3) ;
+			transform: perspective(400px) rotateY(0deg) scale(1.2) ;
 		}
 	}
 
@@ -242,13 +280,27 @@
 }
 
 .flipped {
+
 	.Card__back {
 		box-shadow: -1px -1px 27px -6px rgba(59,59,59,1);
 	}
+
 	.Card__content {
 		opacity: 1;
-	}		
+	}
+
+	.Card__front--tint {
+		opacity: 0;
+	}
+
+	.Card__front--title {
+		opacity: 0;
+	}
+
+
 }
+
+
 
 
 
