@@ -4,7 +4,7 @@
 
 <div class="container"> 
 
-	<svg class="icon icon-menu"><use xlink:href="#icon-menu"></use></svg>
+	<!-- <svg class="icon icon-menu"><use xlink:href="#icon-menu"></use></svg> -->
 
 	<header class="site_header">
 		<div class=" inner_wrap">
@@ -26,6 +26,9 @@
 
 
 
+
+
+
 	<section id="hero" class="section hero page active">
 
 		<div class="home-overlay"></div>
@@ -34,24 +37,36 @@
 			<?php include "inc/logo-overlay-svg.php"; ?>
 		</div>
 
-		<a href="#collections" id="down-link" class="hero-down-link">
+		<a href="#gallery" id="down-link" class="hero-down-link">
 			<svg class="arrow-down"><use xlink:href="#arrow-down"></use></svg>
 		</a>		
 
 	</section>	
 
 
-	<section id="collections" class="section page ">
+
+
+
+	<section id="gallery" class="section page ">
 		<?php include "inc/slides.php"; ?>
 	</section>
 
+
+	
+
 	<section id="about" class="section page ">
-		<?php include 'inc/about-2.php'; ?>
+		<?php include 'inc/about.php'; ?>
 	</section>
+
+
+	
 
 	<section id="contact" class="section page ">
 		<?php include 'inc/contact.php'; ?>
 	</section>
+
+
+	
 
 
 

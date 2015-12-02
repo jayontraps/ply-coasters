@@ -1,0 +1,14 @@
+
+#gallery {
+	background-color: $dark_green_grey;	
+}
+
+@media (max-width: $breakpoint-medium) {
+
+	#gallery {
+		position: relative;
+		height: 100vh;
+	}
+
+}
+

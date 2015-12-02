@@ -25,6 +25,12 @@
 	}
 }
 
+@media (max-width: $breakpoint-medium) {
+	.logo-overlay {
+		width: 80%;
+	}
+}
+
 
 /* shapes */
 .c-shape {

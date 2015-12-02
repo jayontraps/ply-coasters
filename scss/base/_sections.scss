@@ -1,47 +1,69 @@
-html, body {
-	height: 100%;
-}
+// html, body {
+// 	height: 100%;
+// }
+
+// body {
+// 	overflow: hidden;
+// }
+
+// @media (max-width : $breakpoint-small) {
+	
+// 	body {
+// 		&.scroll {
+
+// 			overflow: auto;
+
+// 			.page {
+// 				height: auto;		
+// 			}			
+// 		}
+// 	}
+// }
+
 
 body {
-	overflow: hidden;
-}
-
-@media (max-width : $breakpoint-small) {
-	
-	body {
-		&.scroll {
-
-			overflow: auto;
-
-			.page {
-				height: auto;		
-			}			
-		}
-	}
-}
-
-
-
-.container {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	perspective: 1200px;
+	background-color: $dark_green_grey;
 }
 
 .page {
-	width: 100%;
+	position: relative;
 	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	visibility: hidden;
-	overflow: hidden;
-	backface-visibility: hidden;
-	transform: translate3d(0, 0, 0);
-	transform-style: preserve-3d;
-	// will-change: transform;
 }
+
+
+
+@media (min-width : $breakpoint-medium) {
+
+	html, body {
+		height: 100%;
+	}
+
+	body {
+		overflow: hidden;
+	}
+
+	.container {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		perspective: 1200px;
+	}
+
+	.page {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		visibility: hidden;
+		overflow: hidden;
+		backface-visibility: hidden;
+		transform: translate3d(0, 0, 0);
+		transform-style: preserve-3d;
+		padding: 0;
+	}
+}
+
 
 .page-current,
 .no-js .page,
@@ -53,6 +75,8 @@ body {
 .isAnimating {
 	z-index: 2;
 }
+
+
 
 
 

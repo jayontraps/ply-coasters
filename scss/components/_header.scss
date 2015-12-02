@@ -1,27 +1,33 @@
 .site_header {
-
 	@include reset;
 	@extend .cf;
 	position: fixed;
-	height: auto;
+	// height: auto;
 	width: 100%;
 	z-index: 9;
-	transform: translateY(-200px);
-	transition: all 0.7s ease;
 
-	&.toggled {
-		transform: translateY(0);
-		background-color: $transparent-black;
-	}
+	// transform: translateY(-200px);
+	// transition: all 0.7s ease;
+
+	// &.toggled {
+	// 	transform: translateY(0);
+	// 	background-color: $transparent-black;
+	// }
 
 }
 
-@media (min-width: $breakpoint-small ) {
+// @media (min-width: $breakpoint-small ) {
 
+// 	.site_header {
+// 		height: 88px;
+// 		transform: translateY(0);
+// 		background-color: transparent;
+// 	}
+
+// }
+
+ @media (max-width: $breakpoint-medium ) {
 	.site_header {
-		height: 88px;
-		transform: translateY(0);
-		background-color: transparent;
+		background-color: $transparent-black;
 	}
-
 }

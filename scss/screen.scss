@@ -27,7 +27,7 @@
 // sections
 @import 'sections/hero';
 @import 'sections/about';
-@import 'sections/collections';
+@import 'sections/gallery';
 @import 'sections/contact';
 
 // components
@@ -37,11 +37,11 @@
 @import 'components/flexSlider';
 @import 'components/slides';
 
-@import 'components/cards-2';
-@import 'components/masonry-2';
+@import 'components/cards';
+@import 'components/masonry';
 
 @import "components/Button";
-@import 'components/home-overlay';
+@import 'components/logo-overlay';
 
 
 

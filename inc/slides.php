@@ -1,25 +1,14 @@
 <div class="flexslider">
 <ul class="slides">
-<!--   <li style="background-image: url('img/fullscreen/slides/images-full-screen-2.jpg');" >
+<li></li>
+<li></li>
+<li></li>
 
+<!--   <li style="background-image: url('img/fullscreen/slides/images-full-screen-5.jpg');" ></li>
+  <li style="background-image: url('img/fullscreen/slides/images-full-screen-1.jpg');" > </li>
+  <li style="background-image: url('img/fullscreen/slides/images-full-screen-6.jpg'); background-position: top center;" > </li>
 
-
-  </li> -->
-  <li style="background-image: url('img/fullscreen/slides/images-full-screen-5.jpg');" >
-
-
-
-  </li>
-  <li style="background-image: url('img/fullscreen/slides/images-full-screen-1.jpg');" >
-
-
-
-  </li>
-  <li style="background-image: url('img/fullscreen/slides/images-full-screen-6.jpg'); background-position: top center;" >
-
-
-
-  </li>
+ -->
 </ul>
 </div>
 

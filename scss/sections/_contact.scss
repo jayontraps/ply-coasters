@@ -1,8 +1,31 @@
-#contact {
-	background: url('../img/fullscreen/teacup-full-screen.jpg');
+#contact {	
 	background-size: cover;
 	background-position: 0 0;
 }
+
+
+
+@media (max-width: $breakpoint-medium) {
+	#contact {
+		background: url('../img/fullscreen/m-6-compressor.jpg');
+	}
+}
+
+@media (min-width: $breakpoint-medium) {
+	#contact {
+		background: url('../img/fullscreen/teacup-full-screen-compressor.jpg');
+	}
+}
+
+@media (max-width: $breakpoint-medium) {
+
+	#contact {
+		position: relative;
+		min-height: 100vh;
+	}
+
+}
+
 
 .contact-tint {
 	position: absolute;

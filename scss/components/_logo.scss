@@ -1,16 +1,20 @@
 .logo {
-	padding: 2rem 0 1rem 0;
+	padding: 1rem 0;
 	overflow: auto;
-	display: inline-block;
 	width: 260px;
 	float: left;
 	opacity: 1;
 	transition: all 1s ease;
+	display: none;
 }
 
-@media (min-width: $breakpoint-small) {
+@media (min-width: $breakpoint-medium) {
+
+	
 
 	.logo {
+		display: inline-block;
+		padding: 2rem 0 1rem 0;
 		opacity: 0;
 	}
 
