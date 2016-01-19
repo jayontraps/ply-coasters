@@ -48,7 +48,8 @@ if(isset($_POST['name'], $_POST['email'], $_POST['message'])){
 		$m->addAddress('info@plycoasters.co.uk', 'Php Ifah');
 
 		if($m->send()){
-			header('Location: thanks.php');
+			// header('Location: thanks.php');
+			echo 'Thanks! Your message has been recieved.';
 		}else{
 			echo $m->ErrorInfo;
 			$errors[] = 'Sorry, could not send email. Try again later.';
