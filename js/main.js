@@ -381,7 +381,9 @@
 					$(formMessages).addClass('success');
 
 					// Set the message text.
-					$(formMessages).text(response);
+					// $(formMessages).text(response); // response = server details
+					$(formMessages).text('Thanks! Your message has been recieved.');
+
 
 					// Clear the form.
 					$('#name').val('');
