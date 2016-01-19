@@ -29,7 +29,7 @@
 
 
 
-	<section id="hero" class="section hero page active">
+	<section data-scroll-index='0' id="hero" class="section hero page active">
 
 		<div class="home-overlay"></div>
 
@@ -47,21 +47,21 @@
 
 
 
-	<section id="gallery" class="section page ">
+	<section data-scroll-index='1' id="gallery" class="section page ">
 		<?php include "inc/slides.php"; ?>
 	</section>
 
 
 	
 
-	<section id="about" class="section page ">
+	<section data-scroll-index='2' id="about" class="section page ">
 		<?php include 'inc/about.php'; ?>
 	</section>
 
 
 	
 
-	<section id="contact" class="section page ">
+	<section data-scroll-index='3' id="contact" class="section page ">
 		<?php include 'inc/contact.php'; ?>
 	</section>
 

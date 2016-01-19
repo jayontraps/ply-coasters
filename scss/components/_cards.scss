@@ -10,7 +10,7 @@
 	width: 100%;		
 	background-color: transparent;
 	position: relative;
-	transition: all 800ms ease;
+	transition: all 500ms ease;
 	cursor: pointer;
 
 	> div { /* Front & Back */
@@ -24,7 +24,7 @@
 		text-align: center;
 		color: $color-text;
 		background-color: #fff;
-		transition: all 800ms ease;
+		transition: all 500ms ease;
 		// border: 5px solid $dark_brown;		
 	}			
 }
@@ -41,7 +41,7 @@
 	left: 0;
 	right: 0;		
 	opacity: .90;
-	transition: all 400ms ease;
+	transition: all 500ms ease;
 
 	&:hover {
 		opacity: 0;
@@ -62,7 +62,7 @@
 	color: $white;
 	z-index: 10;
 	opacity: 1;
-	transition: all 400ms ease;
+	transition: all 500ms ease;
 }
 
 
@@ -73,7 +73,7 @@
 	}
 
 	.Card__front {
-		background-image: url(../img/square/square-2.jpg);
+		background-image: url(../img/cards/square-2.jpg);
 		background-size: cover;
 	}
 
@@ -91,7 +91,7 @@
 	}
 
 	.Card__front {
-		background-image: url(../img/quilt/flowers.jpg);
+		background-image: url(../img/cards/map-quilt-3.jpg);
 		background-size: cover;
 	}
 
@@ -108,7 +108,7 @@
 	}
 
 	.Card__front {
-		background-image: url(../img/square/square-3.jpg);
+		background-image: url(../img/cards/square-3.jpg);
 		background-size: cover;
 		background-position: bottom;
 
@@ -127,7 +127,7 @@
 	}
 
 	.Card__front {
-		background-image: url(../img/square/square.jpg);
+		background-image: url(../img/cards/square.jpg);
 		background-size: cover;		
 	}
 
@@ -144,7 +144,7 @@
 	}
 
 	.Card__front {
-		background-image: url(../img/square/square-2.jpg);
+		background-image: url(../img/cards/square-2.jpg);
 		background-size: cover;
 	}
 
@@ -161,7 +161,7 @@
 	}
 
 	.Card__front {
-		background-image: url(../img/square/square.jpg);
+		background-image: url(../img/cards/square.jpg);
 		background-size: cover;		
 	}
 
@@ -178,7 +178,7 @@
 	}
 
 	.Card__front {
-		background-image: url(../img/quilt/map-quilt-2.jpg);
+		background-image: url(../img/cards/flowers.jpg);
 		background-size: cover;	
 	}
 
@@ -205,11 +205,11 @@
 
 .Card__front {
 	color: #fff;
-	transform: perspective(400px) rotateY(0deg);
+	transform: perspective(800px) rotateY(0deg);
 }
 
 .Card__back{	
-	transform: perspective(400px) rotateY(-179.9deg);
+	transform: perspective(800px) rotateY(-179.9deg);
 
 	.centered {
 		padding: 1rem;
@@ -223,22 +223,22 @@
 	&.moveToCenter {
 
 		.Card__front {
-			transform: perspective(400px) rotateY(179.9deg) scale(1.2);
+			transform: perspective(800px) rotateY(179.9deg) scale(1.2);
 		}
 		
 		.Card__back{
-			transform: perspective(400px) rotateY(0deg) scale(1.2) ;
+			transform: perspective(800px) rotateY(0deg) scale(1.2) ;
 		}
 	}
 
 	&.return {
 
 		.Card__front {
-			transform: perspective(400px) rotateY(0deg) scale(1);
+			transform: perspective(800px) rotateY(0deg) scale(1);
 		}
 
 		.Card__back{
-			transform: perspective(400px) rotateY(-179.9deg) scale(1);
+			transform: perspective(800px) rotateY(-179.9deg) scale(1);
 		}
 	}
 
@@ -282,7 +282,7 @@
 .flipped {
 
 	.Card__back {
-		box-shadow: -1px -1px 27px -6px rgba(59,59,59,1);
+		// box-shadow: -1px -1px 27px -6px rgba(59,59,59,1);
 	}
 
 	.Card__content {

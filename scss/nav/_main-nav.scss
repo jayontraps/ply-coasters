@@ -1,3 +1,13 @@
+#home {
+	display: block;
+}
+
+@media (min-width: $breakpoint-medium) {
+	#home {
+		display: none;
+	}
+}
+
 .main_nav {
 	list-style: none;
 	clear: none;
@@ -21,32 +31,46 @@
 			border-top: 2px solid $color-text;
 			padding-top: 1.5rem;
 			color: $white;
-			&.on {
+
+			&.active {
 				color: $active_color;
+				border-color: $active_color;
 			}
 		}		
 		
 		&:nth-child(1) {
 			a {
-			border-color: #ce917e;
+				border-color: #ce917e;
+				&.active {
+					border-color: $active_color;
+				}			
 			}
 		}
 
 		&:nth-child(2) {
 			a {
-			border-color: #799791;
+				border-color: #799791;
+				&.active {
+					border-color: $active_color;
+				}			
 			}
 		}
 
 		&:nth-child(3) {
 			a {
-			border-color: #454E4C;
+				border-color: #454E4C;
+				&.active {
+					border-color: $active_color;
+				}			
 			}
 		}
 
 		&:nth-child(4) {
 			a {
-			border-color: #96A08F;
+				border-color: #96A08F;
+				&.active {
+					border-color: $active_color;
+				}			
 			}
 		}
 	}	

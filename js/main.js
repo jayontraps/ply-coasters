@@ -6,6 +6,17 @@
 		
 
 		/* NAVIGATION */
+
+
+		
+		// $(function(){
+		// 	$.scrollIt({
+		// 		topOffset: -75 
+		// 	});
+		// }); 
+
+
+
 		var breakpoint = '1000px';
 
 		var $sections = $('.section');
@@ -317,7 +328,7 @@
 				cardContainer.css('z-index', '2');
 				$thisCard.removeClass('return flipped');
 				card.isOpen = false;
-			}, 800);
+			}, 500);
 
 			$('.Card').each(function () {
 			    $(this).removeAttr('style');

@@ -47,6 +47,7 @@ body {
 		width: 100%;
 		height: 100%;
 		perspective: 1200px;
+		transform: translateZ(0); // the transform hack: http://www.sitepoint.com/introduction-to-hardware-acceleration-css-animations/		
 	}
 
 	.page {
