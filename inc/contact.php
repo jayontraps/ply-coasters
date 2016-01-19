@@ -9,7 +9,7 @@
 
 	<div class="Contact__box_content">
 											
-		<form id="ajax-contact" method="post" action="mailer.php">
+		<form id="ajax-contact" method="post" action="contact.php">
 
 		<fieldset>
 		  <input id="name" name="name" placeholder="Your name" type="text" tabindex="1" required autofocus>

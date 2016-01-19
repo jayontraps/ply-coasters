@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once 'config.php';
 require_once 'libs/phpmailer/PHPMailerAutoload.php';
 
 $errors = [];
@@ -25,11 +26,17 @@ if(isset($_POST['name'], $_POST['email'], $_POST['message'])){
 		$m->isSMTP();
 		$m->SMTPAuth = true;
 
-		$m->Host = "smtp.gmail.com";
-		$m->Username = 'example@gmail.com';
-		$m->Password = 'password';
+		// $m->Host = "smtp.gmail.com";
+		// $m->Username = 'example@gmail.com';
+		// $m->Password = 'password';
+		// $m->SMTPSecure = 'ssl';
+		// $m->Port = 465;
+
+		$m->Host = "smtp.webfaction.com";
+		$m->Username = $coasters_config[0];
+		$m->Password = $coasters_config[1];
 		$m->SMTPSecure = 'ssl';
-		$m->Port = 465;
+		$m->Port = 465;		
 
 		$m->isHTML(true);
 
@@ -38,7 +45,7 @@ if(isset($_POST['name'], $_POST['email'], $_POST['message'])){
 		
 		$m->FromName = 'Contact';
 
-		$m->addAddress('example@gmail.com', 'Php Ifah');
+		$m->addAddress('info@plycoasters.co.uk', 'Php Ifah');
 
 		if($m->send()){
 			header('Location: thanks.php');
