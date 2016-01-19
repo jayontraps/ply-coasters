@@ -5,6 +5,9 @@
 
 		
 
+		// transformicon
+		var spinner = $('.tcon-loader--spinner360');
+
 		/* NAVIGATION */
 
 
@@ -366,6 +369,9 @@
 				// Stop the browser from submitting the form.
 				e.preventDefault();
 
+				// display the spinner
+				spinner.css('display', 'block');
+
 				// Serialize the form data.
 				var formData = $(form).serialize();
 
@@ -379,6 +385,9 @@
 					// Make sure that the formMessages div has the 'success' class.
 					$(formMessages).removeClass('error');
 					$(formMessages).addClass('success');
+
+					// hide the spinner
+					spinner.css('display', 'none');
 
 					// Set the message text.
 					// $(formMessages).text(response); // response = server details

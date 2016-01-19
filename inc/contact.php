@@ -31,6 +31,10 @@
 
 	</div>
 
+	<span class="tcon-loader--spinner360" aria-label="loading">
+	  <span class="tcon-visuallyhidden">loading</span>
+	</span>	
+
 	<div id="form-messages"></div>					
 
 </div>	<!-- .Contact_box -->
