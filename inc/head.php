@@ -12,8 +12,5 @@
 
         <link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
         
-<!-- 
-        <script type="text/javascript" src="js/js.cookie.js" synch></script>
-         -->
     </head>
     <body>
