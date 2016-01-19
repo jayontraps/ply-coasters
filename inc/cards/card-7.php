@@ -1,4 +1,4 @@
-<div class="Card Card--grid Card--1">	
+<div class="Card Card--grid Card--7">	
 
 	<div class="Card__back">
 	
@@ -11,9 +11,9 @@
 		      <div class="centered">		
 
 
-				<div class="Card__content" data-order="0">
+				<div class="Card__content" data-order="5">
 
-					<h2 class="Card__content__heading">Coaster 1</h2>
+					<h2 class="Card__content__heading">Coaster 6</h2>
 
 					<div class="Card__content__text">
 
@@ -28,13 +28,16 @@
 			</div>
 		</div>
 	</div>
-	
-
 
 
 	<div class="Card__front">
-		<div class="Card__front--title">Coaster no 1</div>
+		<div class="Card__front--title">Coaster no 7</div>
 		<div class="Card__front--tint"></div>
 	</div>
+	
 
 </div>
+
+
+
+

@@ -1,11 +1,18 @@
-.moveToTop {
-	-webkit-animation: moveToTop .6s ease both;
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+
+.moveToTop {	
 	animation: moveToTop .6s ease both;
 }
 
 @keyframes moveToTop {
 	from { }
-	to { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+	to { 
+		transform: translateY(-100%); 
+	}
 }
 
 
@@ -16,23 +23,26 @@
 
 @keyframes moveToRightFade {
 	from { }
-	to { opacity: 0.3; -webkit-transform: translateX(100%); transform: translateX(100%); }
+	to { 
+		opacity: 0.3;
+	 	transform: translateX(100%);
+	 }
 }
 
 
+
 .moveFromLeft {
-	-webkit-animation: moveFromLeft .6s ease both;
 	animation: moveFromLeft .6s ease both;
 }
 
 
 @keyframes moveFromLeft {
-	from { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+	from { 
+	 transform: translateX(-100%); }
 }
 
 
 .page-fade {
-	-webkit-animation: fade .7s ease both;
 	animation: fade .7s ease both;
 }
 
@@ -41,8 +51,9 @@
 	to { opacity: 0.3; }
 }
 
+
+
 .fadeIn {
-	-webkit-animation: fadeIn .7s ease both;
 	animation: fadeIn .7s ease both;
 }
 
@@ -52,11 +63,102 @@
 }
 
 
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-500%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+
+
+
 .moveFromBottom {
-	-webkit-animation: moveFromBottom .6s ease both;
 	animation: moveFromBottom .6s ease both;
 }
 
 @keyframes moveFromBottom {
-	from { -webkit-transform: translateY(100%); transform: translateY(100%); }
+	from { 
+		transform: translateY(100%); 
+	}
 }
+
+
+
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+.zoomBoxIn {
+  animation-name: zoomBoxIn;
+}
+
+@keyframes zoomBoxIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transform: scale(.5);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+	transform: translate(-50%, -50%);
+	transform: scale(2);
+  }
+}
+
+
+
+
+
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.zoomOut {
+  animation-name: zoomOut;
+}
+
+
+

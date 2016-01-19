@@ -1,52 +1,23 @@
 ( function($) {
 
 
-	// coaster = {
-
-	// 	"back":[
-	// 	    {
-	// 	    	"heading":"Coaster 1",
-	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-	// 	 	},	
-	// 	    {
-	// 	    	"heading":"Coaster 2",
-	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-	// 	 	},
-	// 	    {
-	// 	    	"heading":"Coaster 3",
-	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-	// 	 	},
-	// 	    {
-	// 	    	"heading":"Coaster 4",
-	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-	// 	 	},
-	// 	    {
-	// 	    	"heading":"Coaster 5",
-	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-	// 	 	},
-	// 	    {
-	// 	    	"heading":"Coaster 6",
-	// 	     	"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas."
-	// 	     }
-	// ]};
-
-
-
-
-
-
-
-	
-
-
 	$(document).ready(function() {
+
+		
 
 		/* NAVIGATION */
 
 
+		
+		// $(function(){
+		// 	$.scrollIt({
+		// 		topOffset: -75 
+		// 	});
+		// }); 
 
 
 
+		var breakpoint = '1000px';
 
 		var $sections = $('.section');
 		var $navLinks = $('.site_header a');
@@ -58,97 +29,122 @@
 		};
 
 
-
-		$('.icon-menu').on('click', function() {
-			$site_header.toggleClass('toggled');
-		});
-
-
-		
-
-		$('.site_header').on('click', 'a', function(e) {
-
-			e.preventDefault();
-
-			$('body').addClass('init');
-
-			var $this = $(this),
-				$activeSec = $sections.filter('.active'),
-				targetHref = $this.attr('href'),
-				$targetSec = $sections.filter(targetHref);
-
-			if ( $this.hasClass('on') || pt.isAnimating ) {
-				return false;
-			}
-
-			$navLinks.removeClass('on');
-			$this.addClass('on');
-
-			// enable scroll bar on mobile on long pages
-			$('body').removeClass('scroll');
+	    var media_query = window.matchMedia("(min-width: 1000px)");
+	    media_query.addListener(funWrapper);
+	    funWrapper(media_query);
 
 
-			// set header class to determin background and color
-			if( targetHref === '#about' ) {
-
-				$('body').addClass('scroll');
-
-				$site_header.addClass('show-bgc');
-				
-			} 
-
-			else if ( targetHref === '#collections' ) {
-				
-				$site_header.removeClass('show-bgc');
-				
-			} else if ( targetHref === '#contact' ) {
-
-				$('body').addClass('scroll');
-				
-				$site_header.addClass('show-bgc');
-				
-			} else if ( targetHref === '#hero' ) {
-				
-				$site_header.removeClass('show-bgc');
-				
-			}			
+	    function funWrapper(media_query) {
+	      if (media_query.matches) {
+	        animatePageTransitions();
+	        heroDownLink();
+	      } else {
+	        // turn event handlers off
+	        $('.site_header').off();
+	        $('#down-link').off();
+	        // TODO animate scroll to sections     
+	      }
+	    }    		
 
 
+		function animatePageTransitions() {
 
-			if (targetHref === '#collections') {
-				pt.outClass = 'moveToTop';
-				pt.inClass = 'moveFromBottom';
-			} else {
-				pt.outClass = 'moveToRightFade';
-				pt.inClass = 'fadeIn';
-			}		
-		
+			$('.site_header').on('click', 'a', function(e) {
+
+				e.preventDefault();
+
+				$('body').addClass('init');
+
+				var $this = $(this),
+					$activeSec = $sections.filter('.active'),
+					targetHref = $this.attr('href'),
+					$targetSec = $sections.filter(targetHref);
+
+				if ( $this.hasClass('on') || pt.isAnimating ) {
+					return false;
+				}
+
+				$navLinks.removeClass('on');
+				$this.addClass('on');
+
+				// enable scroll bar on mobile on long pages
+				$('body').removeClass('scroll');
 
 
-			$sections.not($activeSec).removeClass('active');
+				// set header class to determin background and color
+				if( targetHref === '#about' ) {
 
-			$activeSec.addClass(pt.outClass + ' isAnimating');
+					$('body').addClass('scroll');
 
-			pt.isAnimating = true;
-
-			$targetSec.addClass(pt.inClass + ' active');
-
-			setTimeout(function() {
-				$activeSec.removeClass( pt.outClass + ' active isAnimating');
-				$targetSec.removeClass( pt.inClass );
-				pt.isAnimating = false;
-			}, 700);
+					$site_header.addClass('show-bgc');
 					
-		});
+				} 
+
+				else if ( targetHref === '#gallery' ) {
+					
+					$site_header.removeClass('show-bgc');
+					
+				} else if ( targetHref === '#contact' ) {
+
+					$('body').addClass('scroll');
+					
+					$site_header.addClass('show-bgc');
+					
+				} else if ( targetHref === '#hero' ) {
+					
+					$site_header.removeClass('show-bgc');
+					
+				}			
 
 
 
-		/* HERO DOWN LINK */
-		$('#down-link').on('click', function(e) {
-			e.preventDefault();
-			$('body').addClass('init');
-			$('#collections-link').trigger('click');
-		});
+				if (targetHref === '#gallery') {
+					pt.outClass = 'moveToTop';
+					pt.inClass = 'moveFromBottom';
+				} else {
+					pt.outClass = 'moveToRightFade';
+					pt.inClass = 'fadeIn';
+				}		
+			
+
+
+				$sections.not($activeSec).removeClass('active');
+
+				$activeSec.addClass(pt.outClass + ' isAnimating');
+
+				pt.isAnimating = true;
+
+				$targetSec.addClass(pt.inClass + ' active');
+
+				setTimeout(function() {
+					$activeSec.removeClass( pt.outClass + ' active isAnimating');
+					$targetSec.removeClass( pt.inClass );
+					pt.isAnimating = false;
+				}, 700);
+						
+			});
+
+		};
+		
+
+		function heroDownLink() {
+			$('#down-link').on('click', function(e) {
+				e.preventDefault();
+				$('body').addClass('init');
+				$('#gallery-link').trigger('click');
+			});
+		};
+		
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -180,14 +176,6 @@
 			// $('.site_header').show();
 			$('#down-link').addClass('on');
 		}
-
-		function newSession() {
-			if (Cookies.get('loaded')) {
-
-			} else {
-				Cookies.set('loaded', '1');
-			}
-		}
 		setTimeout(clearOverlay, 1400);
 		setTimeout(showHeader, 1400);
 
@@ -206,10 +194,41 @@
 
 
 		/* Cards */
-		var card = {};
+		card = {};
 		var dimmer = $('.dimmer');
 		var cardContainer = $('.Card__container');
-		var textOverlay = $('.Card__text__overlay');
+
+
+
+		/* isolate one panel and remove it's tint on load */
+		function returnTint() {
+			$('.Card__front--tint').each(function () {
+			    $(this).removeClass('on');
+			});
+		};
+
+		function removeTint() {
+			$('.Card--4 .Card__front--tint').addClass('on');
+		};
+
+
+		$(cardContainer).hover(
+			function() {
+				if (!card.isOpen) {
+					returnTint();
+				}
+
+			}, function() {
+				if (!card.isOpen) {
+					removeTint();
+				} 
+			}
+		);		
+
+
+
+
+
 		
 		$('.Card').on('click', function(event) {
 
@@ -263,49 +282,6 @@
 				cardContainer
 					.css('z-index', 'auto');
 
-				// pull back others
-				$('.Card').not(this).addClass('pull-back');
-
-
-
-
-
-
-				// inject text into overlay div to overcome blurry scaled text
-				// var currCoasterId = $this.find('.Card__content').data('order'),
-				// 	currCoasterHeading = coaster.back[currCoasterId].heading,
-				// 	currCoasterText = coaster.back[currCoasterId].text;
-			
-				// var 
-				// 	overlayLeftVal = window.x - 210,
-				// 	overlayTopVal = window.y - 210,
-				// 	textDivStyles = {
-				// 	'top' : overlayTopVal + 'px',
-				// 	'left' : overlayLeftVal + 'px'
-				// };
-
-
-				// textOverlay.css(textDivStyles);
-
-
-				// $('<h2/>', {
-				// 	'class': 'Card__content__heading',
-				// 	html: currCoasterHeading
-				// })
-				// .appendTo( textOverlay.find('#text_target'));
-
-				// $('<div/>', {
-				// 	'class': 'Card__content__text',
-				// 	html: currCoasterText
-				// })
-				// .appendTo( textOverlay.find('#text_target'));
-				
-
-
-
-
-
-
 
 			} else {
 				alert ("Your browser does not support this example!");
@@ -331,9 +307,6 @@
 
 			event.stopPropagation();
 
-			// textOverlay.find('#text_target').empty();
-
-
 			var $thisCard = $(this).closest('.Card'),			
 				transformValue = 'translate(0, 0)',
 				styles = {
@@ -354,11 +327,11 @@
 				dimmer.css('z-index', '1');
 				cardContainer.css('z-index', '2');
 				$thisCard.removeClass('return flipped');
-			}, 800);
+				card.isOpen = false;
+			}, 500);
 
 			$('.Card').each(function () {
-			    $(this).removeAttr('style').removeClass('pull-back');
-
+			    $(this).removeAttr('style');
 			});			
 		});
 
@@ -448,6 +421,8 @@
 		$('.contact-tint').removeClass('active');
 		$('.Contact__main').removeClass('deactivate');
 	});
+
+
 
 
 

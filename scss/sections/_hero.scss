@@ -1,19 +1,32 @@
 
-
 #hero {
-	background: url('../img/fullscreen/images-full-screen-4.jpg');
-	background-size: cover;
-	background-position: 0 48%;
+	height: 100vh;	
 }
 
-.site_title {
-	
-	margin: 0;
-	@media (min-width: $breakpoint-medium) {
-		// margin-top:-12rem;
+@media (max-width: $breakpoint-medium) {
+	#hero {
+		background: url('../img/mobile/m-2-compressor.jpg');
+		background-size: cover;	
 	}
-	
 }
+
+@media (min-width: $breakpoint-medium) {
+	#hero {
+		background: url('../img/fullscreen/images-full-screen-4.jpg');
+		background-position: 0 48%;
+		background-size: cover;	
+	}
+}
+
+
+
+
+
+
+.site_title {	
+	margin: 0;	
+}
+
 
 .hero {
 	h1 {

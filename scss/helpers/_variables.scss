@@ -1,6 +1,6 @@
 // responsive breakpoints
 $breakpoint-small: 660px;
-$breakpoint-medium: 50rem;
+$breakpoint-medium:1000px;
 $breakpoint-large: 75rem;
 
 $max-width: 70rem; 
@@ -11,6 +11,21 @@ $base-font-size: 16px;
 $base-font-standard: arial, helvetica, "free sans", sans-serif;
 $base-font-custom: 'Raleway';
 $head-font-custom: 'Raleway';
+
+
+
+$dark_green: #155147; // dark green
+$dark_green_grey: #454E4C; // dark greeny grey
+$pink: #CE917E; // pink 
+
+$st2: #8B7262; // brown x
+$st3: #96A08F; // light-green x
+$st5: #CFB7AB; // biege x
+$st7: #DDD6D2; // light beige x
+
+$dark_blue: #053551; 
+$red: #410C12; 
+$dark_brown: #8B7262;
 
 // colors
 $chalk_board: #2C2729;
@@ -26,18 +41,8 @@ $transparent-black: rgba(0,0,0,.8);
 $transparent-mid-black: rgba(0,0,0,.3);
 $white: #fbfbfb;
 $grey: #888;
-$button_color: #0CF;
-$button_color_hover: #09C;
-$active_color: $button_color;
+$button_color: $dark_green;
+$button_color_hover: darken($button_color, 10%);
+$active_color: lighten($red, 40%);
 
 
-
-
-$st1: #155147;
-$st2: #8B7262;
-$st3: #96A08F;
-$st4: #CE917E;
-$st5: #CFB7AB;
-$st6: #CE917E;
-$st7: #DDD6D2;
-$st8: #454E4C; 

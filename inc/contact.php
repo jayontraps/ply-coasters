@@ -1,7 +1,7 @@
 
 <div class="contact-tint"></div>
 
-<div class="Contact__box">
+<div class="Contact__box animated">
 
 	<div class="Contact__closeBtn">
 		<svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg>
@@ -41,7 +41,7 @@
 	<div class="inner">
 		<div class="centered">
 			
-			<div class="Contact__main">
+			<div class="Contact__main animated">
 				
 				<h1 class="Contact__main__heading">Upcoming events</h1>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
