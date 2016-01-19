@@ -45,7 +45,7 @@ if(isset($_POST['name'], $_POST['email'], $_POST['message'])){
 		
 		$m->FromName = 'Contact';
 
-		$m->addAddress('info@plycoasters.co.uk', 'Php Ifah');
+		$m->addAddress('info@plycoasters.co.uk', 'Ply Coasters');
 
 		if($m->send()){
 			// header('Location: thanks.php');
