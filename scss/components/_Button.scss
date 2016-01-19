@@ -1,0 +1,37 @@
+.Button {
+	padding: .5rem;
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background: $button_color;
+	color: $white;
+	margin:0;	
+	box-shadow: none;
+	text-align: center;
+ 	text-transform: uppercase;
+ 	font-size: .9rem;
+
+	&:hover {
+		background: $button_color_hover;
+		color: $white;
+		transition:background-color 0.3s ease-in-out;
+	}
+
+	&:active {
+		box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); 
+	}
+}
+
+// .Button--contact {
+// 	text-align: center;
+// 	margin: 0 auto;
+// 	width: 200px;
+// 	background-color: $transparent-white;
+// 	text-transform: uppercase;
+// 	transition: all 600ms ease;
+// 	&:hover {
+// 		background-color: $transparent-mid-black;
+// 	}
+
+// }
+

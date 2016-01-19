@@ -1,0 +1,20 @@
+#about {
+	background-color: $st8;	
+}
+
+.dimmer {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);	
+	opacity: 0;
+	transition: all 1s ease;
+	&.dimmed {
+		opacity: 1;
+	}
+}
+
+
