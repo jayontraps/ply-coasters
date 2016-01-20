@@ -1,3 +1,7 @@
+module.exports = function scrollIt() {
+
+
+
 /**
  * ScrollIt
  * ScrollIt.js(scroll•it•dot•js) makes it easy to make long, vertically scrolling pages.
@@ -22,8 +26,15 @@
         scrollTime: 600,
         activeClass: 'active',
         onPageChange: null,
-        topOffset : 0
+        topOffset : { val: 0}
     };
+
+    var listeners = {
+        scroll : null,
+        keydown: null,
+        click: null,
+    };
+
 
     $.scrollIt = function(options) {
 
@@ -46,7 +57,7 @@
         var navigate = function(ndx) {
             if(ndx < 0 || ndx > lastIndex) return;
 
-            var targetTop = $('[data-scroll-index=' + ndx + ']').offset().top + settings.topOffset + 1;
+            var targetTop = $('[data-scroll-index=' + ndx + ']').offset().top + settings.topOffset.val + 1;
             $('html,body').animate({
                 scrollTop: targetTop,
                 easing: settings.easing
@@ -61,7 +72,7 @@
         var doScroll = function (e) {
             var target = $(e.target).closest("[data-scroll-nav]").attr('data-scroll-nav') ||
             $(e.target).closest("[data-scroll-goto]").attr('data-scroll-goto');
-            navigate(parseInt(target));
+            navigate(parseInt(target, 10));
         };
 
         /**
@@ -75,10 +86,10 @@
                 return false;
             }
             if(key == settings.upKey && active > 0) {
-                navigate(parseInt(active) - 1);
+                navigate(parseInt(active, 10) - 1);
                 return false;
             } else if(key == settings.downKey && active < lastIndex) {
-                navigate(parseInt(active) + 1);
+                navigate(parseInt(active, 10) + 1);
                 return false;
             }
             return true;
@@ -106,8 +117,8 @@
             var winTop = $(window).scrollTop();
 
             var visible = $('[data-scroll-index]').filter(function(ndx, div) {
-                return winTop >= $(div).offset().top + settings.topOffset &&
-                winTop < $(div).offset().top + (settings.topOffset) + $(div).outerHeight()
+                return winTop >= $(div).offset().top + settings.topOffset.val &&
+                winTop < $(div).offset().top + (settings.topOffset.val) + $(div).outerHeight();
             });
             var newActive = visible.first().attr('data-scroll-index');
             updateActive(newActive);
@@ -120,10 +131,63 @@
 
         $(window).on('keydown', keyNavigation);
 
-        $('body').on('click','[data-scroll-nav], [data-scroll-goto]', function(e){
+        var clickHandler = function(e){
             e.preventDefault();
             doScroll(e);
+        };
+
+        $('body').on('click','[data-scroll-nav], [data-scroll-goto]', clickHandler);
+
+        listeners.scroll = watchActive;
+        listeners.keydown = keyNavigation;
+        listeners.click = clickHandler;
+    };
+
+    $.scrollIt.listeners = listeners;
+
+    $.scrollIt.destroy = function () {
+        $(window).off('scroll', listeners.scroll);
+        $(window).off('keydown', listeners.keydown);
+        $('body').off('click','[data-scroll-nav], [data-scroll-goto]', listeners.click);
+    };
+
+
+
+
+
+
+
+
+
+
+
+    var mQuery = window.matchMedia("(max-width: 1000px)");
+    mQuery.addListener(my_function);
+    my_function(mQuery);
+
+    var topOffset = {
+      val: -70
+    };
+
+    function my_function(mQuery) {
+      if (mQuery.matches) {
+        $('body').addClass('sm-screen');
+        $.scrollIt({
+             topOffset : topOffset
         });
 
-    };
+      } else {
+        $('body').removeClass('sm-screen');
+        $.scrollIt.destroy();
+      }
+    } 
+
+
+
+
+
 }(jQuery));
+
+
+
+};

@@ -13,11 +13,12 @@
 
 				<div class="Card__content" data-order="5">
 
-					<h2 class="Card__content__heading">Coaster 6</h2>
+					<h2 class="Card__content__heading">Wild Flowers</h2>
 
 					<div class="Card__content__text">
 
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque saepe porro, dignissimos magni officia totam doloribus ratione odit inventore iste, dicta, laboriosam recusandae eligendi quidem quisquam. Vel officia inventore quas.
+						<p>Cut from a book on wild flowers I had as a child, my flower coasters are popular on Mothers Day, and as valentine and birthday gifts for garden-lovers.</p>
+						<p> FSC birch plywood and finished with a low VOC sealant.
 						</p>
 						
 					</div>
@@ -31,8 +32,11 @@
 
 
 	<div class="Card__front">
-		<div class="Card__front--title">Coaster no 7</div>
+		<div class="Card__front--title">no 7 - Wild flowers</div>
 		<div class="Card__front--tint"></div>
+		<div class="target">
+			<svg class="icon icon-target"><use xlink:href="#icon-target"></use></svg>
+		</div>
 	</div>
 	
 

@@ -43,14 +43,41 @@
 	opacity: .90;
 	transition: all 500ms ease;
 
-	&:hover {
-		opacity: 0;
-	}
+	// &:hover {
+	// 	opacity: 0;
+	// }
 
-	&.on {
-		opacity: 0;
+	// &.on {
+	// 	opacity: 0;
+	// }
+
+
+}
+
+
+
+
+
+.grid-item {
+
+	.Card__front--tint {
+
+		&:hover {
+			background-color: rgba(255,255,255,.7);
+		}
+
+		&.on {
+			background-color: rgba(255,255,255,.7);
+		}
+
+		&.highlight {
+			background-color: rgba(255,255,255,.7);
+		}	
 	}	
 }
+
+
+
 
 
 .Card__front--title {
@@ -60,10 +87,82 @@
 	bottom: .5rem;
 	right: .5rem;
 	color: $white;
+	font-weight: bold;
 	z-index: 10;
 	opacity: 1;
 	transition: all 500ms ease;
 }
+
+
+
+
+
+
+
+
+.target {
+	width: 4rem;
+	height: 4rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -2rem 0 0 -2rem;
+	opacity: 0;
+	background-color: transparent;
+	transform: translateY(-100%);
+	transition: all 200ms ease-in;
+
+	&.initial_state {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.icon-target {
+	width: 100%;
+	height: 100%;
+	color: $color-text;	
+	transition: all 300ms ease-in;
+
+	&:hover {
+		color: $active_color_large_screen;
+	}
+}
+
+
+.Card__front {
+	// overflow: hidden;
+
+	&:hover {
+
+		.target {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.Card__front--title {
+			color: $color-text;
+			font-weight: bold;
+		}
+	}
+}
+
+
+.flipped {
+	.Card__front {
+		.target {
+			opacity: 0;
+		}
+	}
+}
+
+
+
+
+
+
+
+
 
 
 .Card--1 {
@@ -73,7 +172,7 @@
 	}
 
 	.Card__front {
-		background-image: url(../img/cards/square-2.jpg);
+		background-image: url(../../img/cards/square-2.jpg);
 		background-size: cover;
 	}
 
@@ -91,7 +190,7 @@
 	}
 
 	.Card__front {
-		background-image: url(../img/cards/map-quilt-3.jpg);
+		background-image: url(../../img/cards/map-quilt-3.jpg);
 		background-size: cover;
 	}
 
@@ -108,7 +207,7 @@
 	}
 
 	.Card__front {
-		background-image: url(../img/cards/square-3.jpg);
+		background-image: url(../../img/cards/square-3.jpg);
 		background-size: cover;
 		background-position: bottom;
 
@@ -127,7 +226,7 @@
 	}
 
 	.Card__front {
-		background-image: url(../img/cards/square.jpg);
+		background-image: url(../../img/cards/square.jpg);
 		background-size: cover;		
 	}
 
@@ -144,7 +243,7 @@
 	}
 
 	.Card__front {
-		background-image: url(../img/cards/square-2.jpg);
+		background-image: url(../../img/cards/square-2.jpg);
 		background-size: cover;
 	}
 
@@ -161,7 +260,7 @@
 	}
 
 	.Card__front {
-		background-image: url(../img/cards/square.jpg);
+		background-image: url(../../img/cards/square.jpg);
 		background-size: cover;		
 	}
 
@@ -178,7 +277,7 @@
 	}
 
 	.Card__front {
-		background-image: url(../img/cards/flowers.jpg);
+		background-image: url(../../img/cards/flowers.jpg);
 		background-size: cover;	
 	}
 
@@ -250,9 +349,21 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 	z-index: 11;
+
+	.icon-close {
+		width: 100%;
+		height: 100%;
+		color: $white;
+	}
+
+	&:hover {
+		.icon-close {
+			color: $active_color_large_screen;
+		}
+	}
 }
 
 

@@ -1,35 +1,31 @@
+var scrollIt = require('./modules/scrollIt');
+var contactForm = require('./modules/contactForm');
+var animatePageTransitions = require('./modules/animatePageTransitions');
+
+
+scrollIt();
+contactForm();
+
+
 ( function($) {
 
 
 	$(document).ready(function() {
 
-		
 
-		// transformicon
-		var spinner = $('.tcon-loader--spinner360');
+		/* setup */	
 
-		/* NAVIGATION */
+		// spinner = $('.tcon-loader--spinner360');		
+		// $sections = $('.section');
+		// $navLinks = $('.site_header a');
+		// $site_header = $('.site_header');
 
-
-		
-		// $(function(){
-		// 	$.scrollIt({
-		// 		topOffset: -75 
-		// 	});
-		// }); 
-
-
-
-		var breakpoint = '1000px';
-
-		var $sections = $('.section');
-		var $navLinks = $('.site_header a');
-		var $site_header = $('.site_header');
-		var pt = {
+		pt = {
 			inClass: 'fadeIn',
 			outClass: '',
 			isAnimating: false
 		};
+
 
 
 	    var media_query = window.matchMedia("(min-width: 1000px)");
@@ -40,94 +36,16 @@
 	    function funWrapper(media_query) {
 	      if (media_query.matches) {
 	        animatePageTransitions();
-	        heroDownLink();
+	        
 	      } else {
 	        // turn event handlers off
 	        $('.site_header').off();
-	        $('#down-link').off();
-	        // TODO animate scroll to sections     
+	        $('#down-link').off();  
+	        heroDownLink(); 
 	      }
 	    }    		
 
 
-		function animatePageTransitions() {
-
-			$('.site_header').on('click', 'a', function(e) {
-
-				e.preventDefault();
-
-				$('body').addClass('init');
-
-				var $this = $(this),
-					$activeSec = $sections.filter('.active'),
-					targetHref = $this.attr('href'),
-					$targetSec = $sections.filter(targetHref);
-
-				if ( $this.hasClass('on') || pt.isAnimating ) {
-					return false;
-				}
-
-				$navLinks.removeClass('on');
-				$this.addClass('on');
-
-				// enable scroll bar on mobile on long pages
-				$('body').removeClass('scroll');
-
-
-				// set header class to determin background and color
-				if( targetHref === '#about' ) {
-
-					$('body').addClass('scroll');
-
-					$site_header.addClass('show-bgc');
-					
-				} 
-
-				else if ( targetHref === '#gallery' ) {
-					
-					$site_header.removeClass('show-bgc');
-					
-				} else if ( targetHref === '#contact' ) {
-
-					$('body').addClass('scroll');
-					
-					$site_header.addClass('show-bgc');
-					
-				} else if ( targetHref === '#hero' ) {
-					
-					$site_header.removeClass('show-bgc');
-					
-				}			
-
-
-
-				if (targetHref === '#gallery') {
-					pt.outClass = 'moveToTop';
-					pt.inClass = 'moveFromBottom';
-				} else {
-					pt.outClass = 'moveToRightFade';
-					pt.inClass = 'fadeIn';
-				}		
-			
-
-
-				$sections.not($activeSec).removeClass('active');
-
-				$activeSec.addClass(pt.outClass + ' isAnimating');
-
-				pt.isAnimating = true;
-
-				$targetSec.addClass(pt.inClass + ' active');
-
-				setTimeout(function() {
-					$activeSec.removeClass( pt.outClass + ' active isAnimating');
-					$targetSec.removeClass( pt.inClass );
-					pt.isAnimating = false;
-				}, 700);
-						
-			});
-
-		};
 		
 
 		function heroDownLink() {
@@ -136,7 +54,7 @@
 				$('body').addClass('init');
 				$('#gallery-link').trigger('click');
 			});
-		};
+		}
 		
 
 
@@ -167,6 +85,9 @@
 
 
 
+
+
+
 		
 		/* HOMEPAGE LOADING */
 
@@ -175,12 +96,13 @@
 			$('.home-overlay').fadeOut(3000);
 		}
 
-		function showHeader() {
-			// $('.site_header').show();
-			$('#down-link').addClass('on');
-		}
 		setTimeout(clearOverlay, 1400);
-		setTimeout(showHeader, 1400);
+
+
+
+
+
+
 
 
 
@@ -203,17 +125,19 @@
 
 
 
+
+
 		/* isolate one panel and remove it's tint on load */
 		function returnTint() {
 			$('.Card__front--tint').each(function () {
-			    $(this).removeClass('on');
+			    $(this).removeClass('on');			   
+			    $('#js_highlighted_card .target').removeClass('initial_state');
 			});
-		};
+		}
 
 		function removeTint() {
 			$('.Card--4 .Card__front--tint').addClass('on');
-		};
-
+		}
 
 		$(cardContainer).hover(
 			function() {
@@ -228,6 +152,19 @@
 			}
 		);		
 
+
+
+
+		/* keep tint highlighted while hovered on icon */
+		$('.target').hover(
+
+			function() {
+				$(this).prev().addClass('highlight');
+
+			}, function() {
+				$(this).prev().removeClass('highlight');
+			}
+		);	
 
 
 
@@ -355,66 +292,7 @@
 
 
 
-		/* CONTACT */
-		$(function() {
 
-			// Get the form.
-			var form = $('#ajax-contact');
-
-			// Get the messages div.
-			var formMessages = $('#form-messages');
-
-			// Set up an event listener for the contact form.
-			$(form).submit(function(e) {
-				// Stop the browser from submitting the form.
-				e.preventDefault();
-
-				// display the spinner
-				spinner.css('display', 'block');
-
-				// Serialize the form data.
-				var formData = $(form).serialize();
-
-				// Submit the form using AJAX.
-				$.ajax({
-					type: 'POST',
-					url: $(form).attr('action'),
-					data: formData
-				})
-				.done(function(response) {
-					// Make sure that the formMessages div has the 'success' class.
-					$(formMessages).removeClass('error');
-					$(formMessages).addClass('success');
-
-					// hide the spinner
-					spinner.css('display', 'none');
-
-					// Set the message text.
-					// $(formMessages).text(response); // response = server details
-					$(formMessages).text('Thanks! Your message has been recieved.');
-
-
-					// Clear the form.
-					$('#name').val('');
-					$('#email').val('');
-					$('#message').val('');
-				})
-				.fail(function(data) {
-					// Make sure that the formMessages div has the 'error' class.
-					$(formMessages).removeClass('success');
-					$(formMessages).addClass('error');
-
-					// Set the message text.
-					if (data.responseText !== '') {
-						$(formMessages).text(data.responseText);
-					} else {
-						$(formMessages).text('Oops! An error occured and your message could not be sent.');
-					}
-				});
-
-			});
-
-		});
 
 
 

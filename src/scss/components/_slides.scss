@@ -117,13 +117,13 @@
     .slides {
         li {
             &:nth-child(1) {
-                background-image: url('../img/mobile/m-4-compressor.jpg');
+                background-image: url('../../img/mobile/m-4-compressor.jpg');
             }
             &:nth-child(2) {
-                background-image: url('../img/mobile/m-1-compressor.jpg');
+                background-image: url('../../img/mobile/m-1-compressor.jpg');
             }
             &:nth-child(3) {
-                background-image: url('../img/mobile/m-5-compressor.jpg');
+                background-image: url('../../img/mobile/m-5-compressor.jpg');
                 // background-position: top center;
             }
         }
@@ -135,13 +135,13 @@
     .slides {
         li {
             &:nth-child(1) {
-                background-image: url('../img/fullscreen/slides/images-full-screen-5.jpg');
+                background-image: url('../../img/fullscreen/slides/images-full-screen-5.jpg');
             }
             &:nth-child(2) {
-                background-image: url('../img/fullscreen/slides/images-full-screen-1.jpg');
+                background-image: url('../../img/fullscreen/slides/images-full-screen-1.jpg');
             }
             &:nth-child(3) {
-                background-image: url('../img/fullscreen/slides/images-full-screen-6.jpg');
+                background-image: url('../../img/fullscreen/slides/images-full-screen-6.jpg');
                 background-position: top center;
             }
         }
