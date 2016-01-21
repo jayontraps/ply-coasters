@@ -12,7 +12,7 @@
 		<form id="ajax-contact" method="post" action="contact.php">
 
 		<fieldset>
-		  <input id="name" name="name" placeholder="Your name" type="text" tabindex="1" required autofocus>
+		  <input id="name" name="name" minlength="2" placeholder="Your name" type="text" tabindex="1" required autofocus>
 		</fieldset>
 
 		<fieldset>
@@ -48,16 +48,55 @@
 			<div class="Contact__main animated">
 				
 				<h1 class="Contact__main__heading">Upcoming events</h1>
-				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.</p>
-				<ul>
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit officia dolorum deleniti velit enim, placeat ex. </li>
-					<li>Saepe, fugit, possimus. Magni dignissimos facilis necessitatibus cupiditate, recusandae nihil earum, ea quisquam sapiente placeat.</li>
-					<li>Rerum pariatur consectetur facere veniam praesentium possimus, alias eius eos fugiat sequi incidunt iusto ex velit suscipit facilis. </li>
-					<li>Quasi eaque recusandae similique, magni nam aspernatur, id quaerat sint ad ullam non iusto unde minima, mollitia expedita, laudantium ab? </li>
-					<li>Nam quisquam ab vero iste labore deserunt eos quae corrupti deleniti inventore, quo doloremque harum excepturi aut laudantium provident expedita vel earum, enim numquam. </li>
+
+
+				<ul class="event-list">
+<!-- template -->
+<!-- 				
+				<li class="event-li">
+					<span class="event-date"></span>
+					<span class="event-link">
+						<a href="" target="_blank"></a>
+					</span>
+					<span class="event-details"></span>
+				</li>
+ -->					
+
+				<li class="event-li">
+					<span class="event-date">Sunday 7th Feb 2016</span> - 
+					<span class="event-link">
+						<a href="https://www.facebook.com/events/164736044221639" target="_blank">So Last Century</a>
+					</span> - 
+					<span class="event-details">Venue 28, Beckenham, London.</span>
+				</li>
+
+				<li class="event-li">
+					<span class="event-date">Friday 27th and Saturday 28th Feb 2016</span> - 
+					<span class="event-link">
+						<a href="https://www.rhs.org.uk/shows-events/rhs-london-shows/rhs-london-botanical-art-show" target="_blank">RHS Botanical Art Fair</a>
+					</span> - 
+					<span class="event-details">London.</span>
+				</li>
+
+				<li class="event-li">
+					<span class="event-date">Saturday 16th and and Sunday 17th April 2016</span> - 
+					<span class="event-link">
+						<a href="http://classiccarbootsale.co.uk" target="_blank">Classic Car Boot Sale</a>
+					</span> - 
+					<span class="event-details">Kings Cross, London.</span>
+				</li>
+
+				<li class="event-li">
+					<span class="event-date">Saturday 30th April, Sunday 1st and Monday 2nd May 2016</span> - 
+					<span class="event-link">
+						<a href="https://www.waterways.org.uk/events_festivals/canalway_cavalcade/iwa_canalway_cavalcade" target="_blank">Canalway Cavalcade</a>
+					</span> - 
+					<span class="event-details">Little Venice, London.</span>
+				</li>
+
+
+			
+					
 				</ul>
 				<div class="Button Button--contact modal">Say hello..</div>
 

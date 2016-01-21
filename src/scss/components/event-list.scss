@@ -1,0 +1,28 @@
+.event-list {
+	padding-left: 1rem;
+}
+
+.event-li {
+	margin: 0 0 .5rem 0;
+}
+
+.event-date {
+	font-style: italic;
+}
+
+.event-link {
+	a {	
+		color: $button_color;
+		font-weight: bold;
+		text-decoration: underline;
+
+		&:hover {
+			color: $button_color_hover;
+			text-decoration: underline;
+		}
+	}
+}
+.event-details {
+	
+}
+

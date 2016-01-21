@@ -1,19 +1,26 @@
-<!-- 
-	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-	<script type="text/javascript" src="js/jquery.easing.js"></script>
-	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
-	<script type="text/javascript" src="js/scrollIt-edit.js"></script>
-	<script type="text/javascript" src="js/transformicon.js"></script>
-	<script src="js/main.js"></script>
- -->
 	
 	<!-- dev -->
+
+<!-- 
 	<script type="text/javascript" src="build/js/plugins.js"></script>
 	<script type="text/javascript" src="build/js/bundle.js"></script>
 
+	 -->
+
 	<!-- prod -->
-	<!-- 
+	
  	<script type="text/javascript" src="build/js/all.min.js"></script>
- 	 -->
+ 	
+
+ 	 <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-72687327-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 
 </body>

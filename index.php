@@ -4,7 +4,6 @@
 
 <div class="container"> 
 
-	<!-- <svg class="icon icon-menu"><use xlink:href="#icon-menu"></use></svg> -->
 
 	<header class="site_header">
 		<div class=" inner_wrap">

@@ -12,7 +12,6 @@ contactForm();
 
 	$(document).ready(function() {
 
-
 		/* setup */	
 
 		// spinner = $('.tcon-loader--spinner360');		

@@ -29,6 +29,12 @@ h1 {
   font-size: 6vmin;
 }
 
+@media (min-width: $breakpoint-medium) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
 h2 {
   font-size: 1.4rem;
 }

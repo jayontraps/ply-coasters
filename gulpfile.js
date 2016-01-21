@@ -17,7 +17,7 @@ var sass = require('gulp-sass'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     lost    = require('lost'),
-    minifyCss = require('gulp-minify-css');
+    cssnano = require('gulp-cssnano');    
 
 
 function errorAlert(error){
@@ -56,7 +56,7 @@ gulp.task('sass', function() {
 gulp.task('minify-css', function() {
     if (!devBuild) {
         return gulp.src( dest + 'css/*.css' )
-            .pipe(minifyCss({compatibility: 'ie8'}))
+            .pipe(cssnano())
             .pipe(gulp.dest(dest + 'css'));  
     }  
 });
@@ -78,14 +78,6 @@ gulp.task('combine', [ 'browserify', 'js' ], function() {
 });
 
 
-
-// gulp.task('lintjs', function() {
-//     return gulp.src([src + 'js/app/**/*.js', 
-//                     '!' + src + 'js/app/modules/animations/animate_js/animate.js',
-//                     '!' + src + 'js/app/modules/Effeckt/*.js',])
-//         .pipe(jshint())
-//         .pipe(jshint.reporter(stylish));
-// });
 
 
 gulp.task('lintjs', function() {
@@ -113,9 +105,7 @@ gulp.task('browser-sync', function() {
     browserSync({
 
         proxy: "localhost/coasters"  
-        // server: {
-        //     baseDir: "./build"
-        // }
+
     });
 });
 
@@ -134,7 +124,7 @@ gulp.task('watch', ['sass', 'lintjs', 'browserify', 'js', 'browser-sync'], funct
 });
 
 
-gulp.task('build', ['sass', 'lintjs', 'combine', 'browser-sync']); // run export NODE_ENV=prod
+gulp.task('build', ['sass', 'minify-css', 'lintjs', 'combine', 'browser-sync']); // run export NODE_ENV=prod
 
 
 gulp.task('default', ['watch']);

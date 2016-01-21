@@ -21,6 +21,7 @@
     "browser-sync": "^2.10.0",
     "browserify": "^12.0.1",
     "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.0",
     "gulp-deporder": "^1.1.0",
     "gulp-if": "^2.0.0",
     "gulp-jshint": "^1.12.0",
