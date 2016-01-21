@@ -12,6 +12,8 @@
 
 				<a class="on" href="#hero">
 
+					<h1 class="site-title">Ply Coasters</h1>
+
 					<img src="img/logo-shapes-plus-words-2.svg" />					
 
 				</a>
