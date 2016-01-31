@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Ply Coasters</title>
+        <link rel="canonical" href="http://www.plycoasters.co.uk" />
         <meta name="description" content="Ply Coasters are handmade in London from 6mm FSC birch plywood, using maps, comics and abandoned books">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="build/js/modernizr.custom.js"></script>
