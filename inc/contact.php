@@ -8,7 +8,7 @@
 	</div>
 
 	<div class="Contact__box_content">
-											
+
 		<form id="ajax-contact" method="post" action="contact.php">
 
 		<fieldset>
@@ -33,9 +33,9 @@
 
 	<span class="tcon-loader--spinner360" aria-label="loading">
 	  <span class="tcon-visuallyhidden">loading</span>
-	</span>	
+	</span>
 
-	<div id="form-messages"></div>					
+	<div id="form-messages"></div>
 
 </div>	<!-- .Contact_box -->
 
@@ -44,15 +44,15 @@
 <div class="outer">
 	<div class="inner">
 		<div class="centered">
-			
+
 			<div class="Contact__main animated">
-				
+
 				<h1 class="Contact__main__heading">Upcoming events</h1>
 
 
 				<ul class="event-list">
 <!-- template -->
-<!-- 				
+<!--
 				<li class="event-li">
 					<span class="event-date"></span>
 					<span class="event-link">
@@ -60,43 +60,65 @@
 					</span>
 					<span class="event-details"></span>
 				</li>
- -->					
+ -->
+
 
 				<li class="event-li">
-					<span class="event-date">Sunday 7th Feb 2016</span> - 
+					<span class="event-date">Thursday 16th November</span> -
 					<span class="event-link">
-						<a href="https://www.facebook.com/events/164736044221639" target="_blank">So Last Century</a>
-					</span> - 
-					<span class="event-details">Venue 28, Beckenham, London.</span>
-				</li>
-
-				<li class="event-li">
-					<span class="event-date">Friday 27th and Saturday 28th Feb 2016</span> - 
-					<span class="event-link">
-						<a href="https://www.rhs.org.uk/shows-events/rhs-london-shows/rhs-london-botanical-art-show" target="_blank">RHS Botanical Art Fair</a>
-					</span> - 
-					<span class="event-details">London.</span>
-				</li>
-
-				<li class="event-li">
-					<span class="event-date">Saturday 16th and and Sunday 17th April 2016</span> - 
-					<span class="event-link">
-						<a href="http://classiccarbootsale.co.uk" target="_blank">Classic Car Boot Sale</a>
-					</span> - 
-					<span class="event-details">Kings Cross, London.</span>
-				</li>
-
-				<li class="event-li">
-					<span class="event-date">Saturday 30th April, Sunday 1st and Monday 2nd May 2016</span> - 
-					<span class="event-link">
-						<a href="https://www.waterways.org.uk/events_festivals/canalway_cavalcade/iwa_canalway_cavalcade" target="_blank">Canalway Cavalcade</a>
-					</span> - 
-					<span class="event-details">Little Venice, London.</span>
+						<a href="http://www.cabbagesandfrocks.co.uk/index.html" target="_blank">Cabbages and Frocks Market</a>
+					</span> -
+					<span class="event-details">Marylebone Christmas Lights with Jennifer Saunders. 3-7pm. FREE</span>
 				</li>
 
 
-			
-					
+				<li class="event-li">
+					<span class="event-date">Sunday 20th November</span> -
+					<span class="event-link">
+						<a href="http://anerleycraft.wixsite.com/anerley-craft-fair" target="_blank">Anerly Craft Fair</a>
+					</span> -
+					<span class="event-details">Anerly Town Hall, 3-7pm. FREE</span>
+				</li>
+
+
+				<li class="event-li">
+					<span class="event-date">Saturday 26th November</span> -
+					<span class="event-link">
+						Church of The Holy Spirit Christmas Fair
+					</span> -
+					<span class="event-details">Narbonne Avenue, Clapham, London SW4 9JU. 12-4pm.</span>
+				</li>
+
+
+				<li class="event-li">
+					<span class="event-date">Sunday 27th November</span> -
+					<span class="event-link">
+						<a href="http://www.friendsofdulwichcollege.co.uk/" target="_blank">Dulwich College Christmas Fair</a>
+					</span> -
+					<span class="event-details">Dulwich College, 11.30am - 4pm. £3 entry.</span>
+				</li>
+
+
+				<li class="event-li">
+					<span class="event-date">Sunday 4th December</span> -
+					<span class="event-link">
+						<a href="https://www.morleycollege.ac.uk/events" target="_blank">Morley College Winter Fair</a>
+					</span> -
+					<span class="event-details">11am - 3pm. FREE</span>
+				</li>
+
+
+				<li class="event-li">
+					<span class="event-date">Sunday 11th December</span> -
+					<span class="event-link">
+						<a href="http://thealmapub.com/home.html" target="_blank">Alma Christmas Fair</a>
+					</span> -
+					<span class="event-details">Church Road, Crystal Palace, London SE19 2TA . 11am - 5pm. FREE</span>
+				</li>
+
+
+
+
 				</ul>
 				<div class="Button Button--contact modal">Say hello..</div>
 
