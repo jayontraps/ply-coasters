@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     notify = require('gulp-notify'),
     gulpif = require('gulp-if'),
-    browserify = require('browserify'),    
+    browserify = require('browserify'),
     jshint = require('gulp-jshint'),
     stylish = require('jshint-stylish'),
     uglify = require('gulp-uglify'),
@@ -17,16 +17,16 @@ var sass = require('gulp-sass'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     lost    = require('lost'),
-    cssnano = require('gulp-cssnano');    
+    cssnano = require('gulp-cssnano');
 
 
 function errorAlert(error){
     notify.onError({
-        title: "Error", 
-        message: "Check your terminal", 
-        sound: "Sosumi"})(error); 
+        title: "Error",
+        message: "Check your terminal",
+        sound: "Sosumi"})(error);
     console.log(error.toString());
-    this.emit("end"); 
+    this.emit("end");
 };
 
 
@@ -37,16 +37,16 @@ var dest = 'build/';
 
 
 gulp.task('sass', function() {
-    return gulp.src(src + "scss/main.scss")        
+    return gulp.src(src + "scss/main.scss")
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'nested'}))
-        .on('error', errorAlert)  
+        .on('error', errorAlert)
         .pipe(postcss([
               lost(),
               autoprefixer({
                 browsers: ['last 2 versions']
             })
-        ]))         
+        ]))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(dest + "css"))
         .pipe(browserSync.stream());
@@ -57,8 +57,8 @@ gulp.task('minify-css', function() {
     if (!devBuild) {
         return gulp.src( dest + 'css/*.css' )
             .pipe(cssnano())
-            .pipe(gulp.dest(dest + 'css'));  
-    }  
+            .pipe(gulp.dest(dest + 'css'));
+    }
 });
 
 
@@ -91,9 +91,9 @@ gulp.task('lintjs', function() {
 
 gulp.task('browserify', function () {
     return browserify(src + 'js/app/entry', { debug: true})
-        .bundle()   
-        .on('error', errorAlert)     
-        .pipe(source('bundle.js'))        
+        .bundle()
+        .on('error', errorAlert)
+        .pipe(source('bundle.js'))
         .pipe(gulp.dest(dest + 'js'));
 });
 
@@ -103,14 +103,12 @@ gulp.task('browserify', function () {
 
 gulp.task('browser-sync', function() {
     browserSync({
-
-        proxy: "localhost/coasters"  
-
+        proxy: "http://plycoasters.dev"
     });
 });
 
 gulp.task('reload-js', ['lintjs', 'browserify', 'js' ], function() {
-    browserSync.reload();   
+    browserSync.reload();
 });
 
 gulp.task('reload-css', ['sass'], function() {

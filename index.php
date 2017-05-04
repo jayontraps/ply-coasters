@@ -2,7 +2,7 @@
 
 <?php include 'inc/svg-defs.php'; ?>
 
-<div class="container"> 
+<div class="container">
 
 
 	<header class="site_header">
@@ -14,13 +14,13 @@
 
 					<h1 class="site-title">Ply Coasters</h1>
 
-					<img src="img/logo-shapes-plus-words-2.svg" />					
+					<img src="img/logo-shapes-plus-words-2.svg" />
 
 				</a>
 
 			</div>
-			
-			<?php include 'inc/main-nav.php'; ?>			
+
+			<?php include 'inc/main-nav.php'; ?>
 
 		</div>
 	</header>
@@ -40,9 +40,9 @@
 
 		<a href="#gallery" id="down-link" class="hero-down-link">
 			<svg class="arrow-down"><use xlink:href="#arrow-down"></use></svg>
-		</a>		
+		</a>
 
-	</section>	
+	</section>
 
 
 
@@ -53,21 +53,21 @@
 	</section>
 
 
-	
+
 
 	<section data-scroll-index='2' id="about" class="section page ">
 		<?php include 'inc/about.php'; ?>
 	</section>
 
 
-	
+
 
 	<section data-scroll-index='3' id="contact" class="section page ">
 		<?php include 'inc/contact.php'; ?>
 	</section>
 
 
-	
+
 
 
 

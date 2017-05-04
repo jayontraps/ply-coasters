@@ -64,60 +64,49 @@
 
 
 				<li class="event-li">
-					<span class="event-date">Thursday 16th November</span> -
+					<span class="event-date">Sunday 23rd April</span> -
 					<span class="event-link">
-						<a href="http://www.cabbagesandfrocks.co.uk/index.html" target="_blank">Cabbages and Frocks Market</a>
+						<a href="http://classiccarbootsale.co.uk/" target="_blank">Classic Car Boot Sale</a>
 					</span> -
-					<span class="event-details">Marylebone Christmas Lights with Jennifer Saunders. 3-7pm. FREE</span>
+					<span class="event-details">Lewis Cubitt Square, King’s Cross, London, N1C 4UG. 10am - 6pm</span>
 				</li>
-
 
 				<li class="event-li">
-					<span class="event-date">Sunday 20th November</span> -
+					<span class="event-date">Saturday 29th April - Monday 1st May</span>
 					<span class="event-link">
-						<a href="http://anerleycraft.wixsite.com/anerley-craft-fair" target="_blank">Anerly Craft Fair</a>
-					</span> -
-					<span class="event-details">Anerly Town Hall, 3-7pm. FREE</span>
+						<a href="https://www.waterways.org.uk/events_festivals/canalway_cavalcade/iwa_canalway_cavalcade" target="_blank">Canalway Cavalcade</a>
+					</span>
+					<span class="event-details">Little Venice, London</span>
 				</li>
-
+				<li class="event-li">
+					<span class="event-date">Sunday 21st May</span>
+					<span class="event-link">
+						<a href="http://weareurbanvillage.co.uk/" target="_blank">Urban Village Fete</a>
+					</span>
+					<span class="event-details">Greenwich Peninsula (Opposite 02 Centre)</span>
+				</li>
 
 				<li class="event-li">
-					<span class="event-date">Saturday 26th November</span> -
+					<span class="event-date">Saturday 24th June</span>
 					<span class="event-link">
-						Church of The Holy Spirit Christmas Fair
-					</span> -
-					<span class="event-details">Narbonne Avenue, Clapham, London SW4 9JU. 12-4pm.</span>
+						<a href="http://www.abbevillefete.com" target="_blank">Abbeville Fete</a>
+					</span>
+					<span class="event-details">Abbeville Road, Clapham, SW4 9JX. 12-4pm</span>
 				</li>
-
-
 				<li class="event-li">
-					<span class="event-date">Sunday 27th November</span> -
+					<span class="event-date">Saturday 8th July</span>
 					<span class="event-link">
-						<a href="http://www.friendsofdulwichcollege.co.uk/" target="_blank">Dulwich College Christmas Fair</a>
-					</span> -
-					<span class="event-details">Dulwich College, 11.30am - 4pm. £3 entry.</span>
+						<a href="http://www.barnes-ca.org/barnesfair/" target="_blank">Barnes Fair</a>
+					</span>
+					<span class="event-details">9.30-5.30pm</span>
 				</li>
-
-
 				<li class="event-li">
-					<span class="event-date">Sunday 4th December</span> -
+					<span class="event-date">Saturday 12th August</span>
 					<span class="event-link">
-						<a href="https://www.morleycollege.ac.uk/events" target="_blank">Morley College Winter Fair</a>
-					</span> -
-					<span class="event-details">11am - 3pm. FREE</span>
+						<a href="https://www.facebook.com/bowies.beckenham.oddity/" target="_blank">Beckenham Bowie Oddity</a>
+					</span>
+					<span class="event-details">Beckenham Recreation Ground, 12-8pm</span>
 				</li>
-
-
-				<li class="event-li">
-					<span class="event-date">Sunday 11th December</span> -
-					<span class="event-link">
-						<a href="http://thealmapub.com/home.html" target="_blank">Alma Christmas Fair</a>
-					</span> -
-					<span class="event-details">Church Road, Crystal Palace, London SE19 2TA . 11am - 5pm. FREE</span>
-				</li>
-
-
-
 
 				</ul>
 				<div class="Button Button--contact modal">Say hello..</div>
