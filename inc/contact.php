@@ -61,52 +61,63 @@
 					<span class="event-details"></span>
 				</li>
  -->
-
-
-				<li class="event-li">
-					<span class="event-date">Sunday 23rd April</span> -
+ 				<li class="event-li">
+					<span class="event-date">Sunday 19th Nov 2017 - 10.30am – 4.45pm </span>
 					<span class="event-link">
-						<a href="http://classiccarbootsale.co.uk/" target="_blank">Classic Car Boot Sale</a>
-					</span> -
-					<span class="event-details">Lewis Cubitt Square, King’s Cross, London, N1C 4UG. 10am - 6pm</span>
+						<a href="http://www.friends-of-age-exchange.org.uk/index.php?page_id=56" target="_blank">Blackheath Christmas Fair</a>
+					</span>
+					<span class="event-details">Blackheath Halls</span>
 				</li>
 
-				<li class="event-li">
-					<span class="event-date">Saturday 29th April - Monday 1st May</span>
+ 				<li class="event-li">
+					<span class="event-date">Saturday 25th Nov 2017 - 12 – 4pm </span>
 					<span class="event-link">
-						<a href="https://www.waterways.org.uk/events_festivals/canalway_cavalcade/iwa_canalway_cavalcade" target="_blank">Canalway Cavalcade</a>
+						<a href="http://www.holyspirit-clapham.org.uk/news/christmasfair/christmas-fair" target="_blank">Church of The Holy Spirit Christmas Fair</a>
 					</span>
-					<span class="event-details">Little Venice, London</span>
-				</li>
-				<li class="event-li">
-					<span class="event-date">Sunday 21st May</span>
-					<span class="event-link">
-						<a href="http://weareurbanvillage.co.uk/" target="_blank">Urban Village Fete</a>
-					</span>
-					<span class="event-details">Greenwich Peninsula (Opposite 02 Centre)</span>
+					<span class="event-details">Norbonne Avenue, Clapham SW4</span>
 				</li>
 
-				<li class="event-li">
-					<span class="event-date">Saturday 24th June</span>
+ 				<li class="event-li">
+					<span class="event-date">Sunday 26th Nov 2017 - 11.30am – 4pm </span>
 					<span class="event-link">
-						<a href="http://www.abbevillefete.com" target="_blank">Abbeville Fete</a>
+						<a href="http://www.friendsofdulwichcollege.co.uk/" target="_blank">Dulwich College Christmas Fair</a>
 					</span>
-					<span class="event-details">Abbeville Road, Clapham, SW4 9JX. 12-4pm</span>
+					<span class="event-details">Dulwich College</span>
 				</li>
-				<li class="event-li">
-					<span class="event-date">Saturday 8th July</span>
+
+ 				<li class="event-li">
+					<span class="event-date">Saturday 2nd December 2017 10am – 4pm </span>
 					<span class="event-link">
-						<a href="http://www.barnes-ca.org/barnesfair/" target="_blank">Barnes Fair</a>
+						Ladywell Christmas Market
 					</span>
-					<span class="event-details">9.30-5.30pm</span>
+					<span class="event-details">Ladywell Road, London SE13</span>
 				</li>
-				<li class="event-li">
-					<span class="event-date">Saturday 12th August</span>
+
+ 				<li class="event-li">
+					<span class="event-date">Saturday 3rd December 2017 11am – 3pm </span>
 					<span class="event-link">
-						<a href="https://www.facebook.com/bowies.beckenham.oddity/" target="_blank">Beckenham Bowie Oddity</a>
+						<a href="https://www.morleycollege.ac.uk/events/1288-morley-winter-fair" target="_blank">Morley College Winter Fair</a>
 					</span>
-					<span class="event-details">Beckenham Recreation Ground, 12-8pm</span>
+					<span class="event-details">61 Westminster Bridge Road, London SE1 7HT</span>
 				</li>
+
+ 				<li class="event-li">
+					<span class="event-date">hursday 7th December 2017 - 5.30pm – 9.30pm </span>
+					<span class="event-link">
+						<a href="http://www.horniman.ac.uk/visit/events/horniman-christmas-market" target="_blank">Horniman Museum Christmas Market</a>
+					</span>
+					<span class="event-details">100 London Rd, Forest Hill, London SE23 3PQ</span>
+				</li>
+
+
+ 				<li class="event-li">
+					<span class="event-date">Saturday 9th December 2107 - 12pm – 5pm </span>
+					<span class="event-link">
+						<a href="http://www.camberwellarts.org.uk/whats-on/2017/12/9/dqdgxmfqr91yk4sjqfvjlnxou47eb9" target="_blank">Made in Camberwell Arts Fair</a>
+					</span>
+					<span class="event-details">The Tiger, 18 Camberwell Grn London SE5 7AA</span>
+				</li>
+
 
 				</ul>
 				<div class="Button Button--contact modal">Say hello..</div>
