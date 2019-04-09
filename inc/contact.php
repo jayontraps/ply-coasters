@@ -62,72 +62,33 @@
 				</li>
  -->
 
-				 
+
 
 				 <!-- new items.. -->
 				 <li class="event-li">
- 					<span class="event-date">Sunday 18th November 10.30am–4.45pm</span>
+ 					<span class="event-date">Saturday 20th April 10am–6pm</span>
  					<span class="event-link">
- 						<a href="http://www.age-exchange.org.uk/get-involved/friends-of-age-exchange/blackheath-christmas-fair/" target="_blank">Blackheath Christmas Fair</a>
+ 						<a href="https://www.london.gov.uk/events/2019-04-20/feast-st-george-2019#acc-i-56710" target="_blank">Feast of St George</a>
  					</span>
- 					<span class="event-details">Blackheath Halls</span>
+ 					<span class="event-details">Trafalgar Square, Westminster, London WC2N 5DN. FREE</span>
  				</li>
 
-
 				<li class="event-li">
-					<span class="event-date">Saturday 24th November 12-5pm</span>
+					<span class="event-date">4-6th May 2019, 10am–6pm (Mon 5pm)</span>
 					<span class="event-link">
-						<a href="https://www.orleanshousegallery.org" target="_blank">Orleans House Shopping Weekend</a>
+						<a href="https://www.waterways.org.uk/events_festivals/canalway_cavalcade/pdfs/iwa_canalway_cavalcade_leaflet_2019" target="_blank">IWA Canalway Cavalcade</a>
 					</span>
-					<span class="event-details">Orleans House Gallery, Riverside, Twickenham TW1 3DJ</span>
-				</li>
-
-
-				<li class="event-li">
-					<span class="event-date">Sunday 25th November 11.30–4pm</span>
-					<span class="event-link">
-						<a href="http://www.friendsofdulwichcollege.co.uk" target="_blank">Dulwich College Christmas Fair</a>
-					</span>
-					<span class="event-details">Dulwich Common SE21 7LD</span>
-				</li>
-
-
-				<li class="event-li">
-					<span class="event-date">Sunday 2nd December 11am–3pm</span>
-					<span class="event-link">
-						<a href="https://www.morleycollege.ac.uk/events/1288-morley-winter-fair" target="_blank">Morley College Winter Fair</a>
-					</span>
-					<span class="event-details">61 Westminster Bridge Road SE1 7HT</span>
+					<span class="event-details">Little Venice London W9. FREE</span>
 				</li>
 
 				<li class="event-li">
-					<span class="event-date">Saturday 8th December 11am-6pm</span>
+					<span class="event-date">Saturday 13th July</span>
 					<span class="event-link">
-						<a href="https://www.pexmas.com/about-pexmas-2018/" target="_blank">Pexmas Festive Market</a>
+						<a href="http://www.barnes-ca.org/barnesfair/" target="_blank">Barnes Fair</a>
 					</span>
-					<span class="event-details">Warwick Gardens, Lyndhurst Way, Peckham SE15 5AQ</span>
+					<span class="event-details">Barnes Common, London FREE</span>
 				</li>
-
-
-				<li class="event-li">
-					<span class="event-date">Saturday 8th December 12–6pm</span>
-					<span class="event-link">
-						<a href="https://www.facebook.com/events/272700780047173/" target="_blank">Brockley Christmas Market,</a>
-					</span>
-					<span class="event-details">Coulgate Street next to Brockley Station</span>
-				</li>
-
-
-				<li class="event-li">
-					<span class="event-date">Sunday 9th December 11am–4pm</span>
-					<span class="event-link">
-						<a href="https://www.sccoop.org.uk/events" target="_blank">The Rookery Christmas Fair</a>
-					</span>
-					<span class="event-details">Streatham Common</span>
-				</li>
-
-
-
+							
 				</ul>
 				<div class="Button Button--contact modal">Say hello..</div>
 
