@@ -66,7 +66,7 @@
 
 				 <!-- new items.. -->
 				 <li class="event-li">
- 					<span class="event-date">Saturday 20th April 10am–6pm</span>
+ 					<span class="event-date">Saturday 20th April 12pm–6pm</span>
  					<span class="event-link">
  						<a href="https://www.london.gov.uk/events/2019-04-20/feast-st-george-2019#acc-i-56710" target="_blank">Feast of St George</a>
  					</span>
@@ -88,7 +88,7 @@
 					</span>
 					<span class="event-details">Barnes Common, London FREE</span>
 				</li>
-							
+
 				</ul>
 				<div class="Button Button--contact modal">Say hello..</div>
 
