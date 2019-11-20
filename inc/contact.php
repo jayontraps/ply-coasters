@@ -53,42 +53,70 @@
 				<ul class="event-list">
 <!-- template -->
 <!--
-				<li class="event-li">
-					<span class="event-date"></span>
-					<span class="event-link">
-						<a href="" target="_blank"></a>
-					</span>
-					<span class="event-details"></span>
-				</li>
+					<li class="event-li">
+						<span class="event-date"></span>
+						<span class="event-link">
+							<a href="" target="_blank"></a>
+						</span>
+						<span class="event-details"></span>
+					</li>
  -->
 
 
 
 				 <!-- new items.. -->
 				 <li class="event-li">
- 					<span class="event-date">Saturday 20th April 12pm–6pm</span>
- 					<span class="event-link">
- 						<a href="https://www.london.gov.uk/events/2019-04-20/feast-st-george-2019#acc-i-56710" target="_blank">Feast of St George</a>
- 					</span>
- 					<span class="event-details">Trafalgar Square, Westminster, London WC2N 5DN. FREE</span>
- 				</li>
-
-				<li class="event-li">
-					<span class="event-date">4-6th May 2019, 10am–6pm (Mon 5pm)</span>
-					<span class="event-link">
-						<a href="https://www.waterways.org.uk/events_festivals/canalway_cavalcade/pdfs/iwa_canalway_cavalcade_leaflet_2019" target="_blank">IWA Canalway Cavalcade</a>
+					 <span class="event-date">
+						 	Friday 22 November 12noon-7pm<br>
+						 	Saturday 23 November 10am-6pm<br>
+					 		Sunday 24 November 10am-5pm.
 					</span>
-					<span class="event-details">Little Venice London W9. FREE</span>
-				</li>
+					 <span class="event-link">
+						 <a href="http://scandimarket.co.uk/events/scandinavian-christmas-market-2019/" target="_blank">Scandinavian Market.</a>
+					 </span>
+					 <span class="event-details">Albion Street Rotherhithe.</span>
+				 </li>
 
-				<li class="event-li">
-					<span class="event-date">Saturday 13th July</span>
-					<span class="event-link">
-						<a href="http://www.barnes-ca.org/barnesfair/" target="_blank">Barnes Fair</a>
-					</span>
-					<span class="event-details">Barnes Common, London FREE</span>
-				</li>
+				 <li class="event-li">
+					 <span class="event-date">Saturday 30th November 10am-3pm.</span>
+					 <span class="event-link">
+						 <a href="https://weareccfm.com/locations/oval/" target="_blank">Oval Farmers’ Market.</a>
+					 </span>
+					 <span class="event-details">St Marks Church, Oval.</span>
+				 </li>
 
+				 <li class="event-li">
+					 <span class="event-date">Sunday 1st December,</span>
+
+					 <span class="event-details">Northcote Road Christmas Market SW11.</span>
+				 </li>
+
+				 <li class="event-li">
+					 <span class="event-date">Saturday 7th December,</span>
+					 <span class="event-link">
+						 <a href="https://www.pexmas.com/whats-on" target="_blank">Pexmas,</a>
+					 </span>
+					 <span class="event-details">Copeland Park & Bussey Building.</span>
+				 </li>
+
+				 <li class="event-li">
+					 <span class="event-date">Saturday 7th December 12noon,</span>
+
+					 <span class="event-details">Brockley Cross Christmas Market.</span>
+				 </li>
+
+				 <li class="event-li">
+					 <span class="event-date">Sunday 8th December,</span>
+
+					 <span class="event-details">The Rookery Christmas Fair, Streatham.</span>
+				 </li>
+
+				 <li class="event-li">
+					 <span class="event-date">Sunday 15th December, 10am-3pm,</span>
+
+					 <span class="event-details">Horniman Christmas Market, Horniman Museum and Gardens.</span>
+				 </li>
+				 
 				</ul>
 				<div class="Button Button--contact modal">Say hello..</div>
 
